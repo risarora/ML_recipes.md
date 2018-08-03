@@ -1,0 +1,175 @@
+Statistics Topics
+
+Chapter 2. Data and Sampling Distributions
+	Correlation
+	Exploring Two or More Variables
+	Random Sampling and Sample Bias
+	Selection Bias
+	Sampling Distribution
+	Bootstrap
+	Confidence Interval
+	Normal Distribution
+	Long Tailed Distribution
+	Student's t-Distribution
+	Binomial Distribution
+	Poisson Distribution
+
+
+
+Chapter 3. Statistical Experiments and Significance Testing
+	A/B Tests
+	Hypothesis Testing
+	Resampling
+	Statistical Significance and P-Value
+	t-Tests
+	Multiple Testing
+	Degrees of Freedom
+	ANNOV
+	Chi-Square Test
+	Multi-Arm Bandit Algorithm
+	Power and Sample Size
+
+
+
+Estimates of Variability
+
+Deviations
+	The difference between the observed values and the estimate of location.
+	errors, residuals
+
+Variance
+	The sum of squared deviations from the mean divided by n – 1 where n is the number of data values.
+	mean-squared-error
+
+Standard deviation
+	The square root of the variance.
+	l2-norm, Euclidean norm
+
+Mean absolute deviation
+	The mean of the absolute value of the deviations from the mean.
+	l1-norm, Manhattan norm
+
+Median absolute deviation from the median
+	The median of the absolute value of the deviations from the median.
+
+Range
+	The difference between the largest and the smallest value in a data set.
+
+Order statistics
+	Metrics based on the data values sorted from smallest to biggest.
+	ranks
+
+
+Exploring the Data Distribution
+Boxplot
+	A plot introduced by Tukey as a quick way to visualize the distribution of data.
+Box and whiskers plot
+Frequency table
+	A tally of the count of numeric data values that fall into a set of intervals (bins).
+Histogram
+	A plot of the frequency table with the bins on the x-axis and the count (or proportion) on the yaxis.
+Density plot
+	A smoothed version of the histogram, often based on a kernal density estimate.
+
+EXPLORING CATEGORICAL DATA
+Mode
+	The most commonly occurring category or value in a data set.
+Expected value
+	When the categories can be associated with a numeric value, this gives an average value based on a category’s probability of occurrence.
+Bar charts
+	The frequency or proportion for each category plotted as bars.
+Pie charts
+	The frequency or proportion for each category plotted as wedges in a pie.
+
+
+
+Correlation
+
+Correlation coefficient
+A metric that measures the extent to which numeric variables are associated with one another
+(ranges from –1 to +1).
+Correlation matrix
+A table where the variables are shown on both rows and columns, and the cell values are the
+correlations between the variables.
+Scatterplot
+A plot in which the x-axis is the value of one variable, and the y-axis the value of another.
+
+
+Exploring Two or More Variables
+
+Contingency tables
+A tally of counts between two or more categorical variables.
+Hexagonal binning
+A plot of two numeric variables with the records binned into hexagons.
+Contour plots
+A plot showing the density of two numeric variables like a topographical map.
+Violin plots
+Similar to a boxplot but showing the density estimate.
+
+
+
+
+
+
+######################################################################################################
+
+
+
+Introduction to statistics
+Measures of Central Tendency
+Understanding the spread of data
+Data Distribution
+Introduction to Probability
+Probabilities of discrete and continuous variables
+Central Limit theorem and the Normal Distribution
+Introduction to Inferential Statistics
+Understanding the Confidence Interval and the margin of error
+Hypothesis Testing
+T tests
+Chi Squared tests
+Understanding the concept of Correlation
+Module Test - Statistics
+
+Introduction to Predictive Modeling
+Understanding the types of Predictive Models
+Stages of Predictive Models
+Hypothesis Generation
+Data Extraction
+Data Exploration
+Reading the data into Python
+Variable Identification
+Univariate Analysis for Continuous Variables
+Univariate Analysis for Categorical Variables
+Bivariate Analysis
+Treating Missing Values
+How to treat Outliers
+Transforming the variables
+Basics of Model Building
+Linear Regression
+Logistic Regression
+Decision Trees
+K-Means
+Module Test - Predictive Modeling
+
+
+
+### Steps of Data Exploration and Preparation
+Missing Value Treatment
+Why missing value treatment is required ?
+Why data has missing values?
+Which are the methods to treat missing value ?
+Techniques of Outlier Detection and Treatment
+What is an outlier?
+What are the types of outliers ?
+What are the causes of outliers ?
+What is the impact of outliers on dataset ?
+How to detect outlier ?
+How to remove outlier ?
+The Art of Feature Engineering
+What is Feature Engineering ?
+What is the process of Feature Engineering ?
+What is Variable Transformation ?
+When should we use variable transformation ?
+What are the common methods of variable transformation ?
+What is feature variable creation and its benefits ?
+ 
