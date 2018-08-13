@@ -1,5 +1,6 @@
 Statistics Topics
 
+
 Chapter 2. Data and Sampling Distributions
 	Correlation
 	Exploring Two or More Variables
@@ -19,7 +20,7 @@ Chapter 2. Data and Sampling Distributions
 Chapter 3. Statistical Experiments and Significance Testing
 	A/B Tests
 	Hypothesis Testing
-	Resampling
+	Re-sampling
 	Statistical Significance and P-Value
 	t-Tests
 	Multiple Testing
@@ -172,4 +173,3 @@ What is Variable Transformation ?
 When should we use variable transformation ?
 What are the common methods of variable transformation ?
 What is feature variable creation and its benefits ?
- 
