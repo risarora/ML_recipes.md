@@ -45,6 +45,34 @@ ROC
 
 
 
+#### Difference between clustering and classification
+
+  *Classification*- A data-set can have different groups/ classes. red, green and black. Classification will try to find rules that divides them in different classes.
+  *Custering*- if a data-set is not having any class and you want to put them in some class/grouping, you do clustering. The purple circles above.
+
+  One liner for Classification:
+
+  Classifying data into pre-defined categories
+
+  One liner for Clustering:
+
+  Grouping data into a set of categories
+
+  Key difference:
+
+  Classification is taking data and putting it into pre-defined categories and in Clustering the set of categories, that you want to group the data into, is not known beforehand.
+
+  Conclusion:
+
+  Classification assigns the category to 1 new item, based on already labeled items while Clustering takes a bunch of unlabeled items and divide them into the categories
+  In Classification, the categories\groups to be divided are known beforehand while in Clustering, the categories\groups to be divided are unknown beforehand
+  In Classification, there are 2 phases – Training phase and then the test phase while in Clustering, there is only 1 phase – dividing of training data in clusters
+  Classification is Supervised Learning while Clustering is Unsupervised Learning
+
+  https://neelbhatt40.wordpress.com/2017/11/21/classification-and-clustering-machine-learning-interview-questions-answers-part-i/
+
+
+
 
 
 https://www.kdnuggets.com/2018/07/beginners-ask-how-many-hidden-layers-neurons-neural-networks.html
