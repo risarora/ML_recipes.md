@@ -69,8 +69,8 @@ ROC
   In Classification, there are 2 phases – Training phase and then the test phase while in Clustering, there is only 1 phase – dividing of training data in clusters
   Classification is Supervised Learning while Clustering is Unsupervised Learning
 
-  https://neelbhatt40.wordpress.com/2017/11/21/classification-and-clustering-machine-learning-interview-questions-answers-part-i/
-
+https://neelbhatt40.wordpress.com/2017/11/21/classification-and-clustering-machine-learning-interview-questions-answers-part-i/
+http://www.differencebetween.net/technology/difference-between-clustering-and-classification/
 
 
 
