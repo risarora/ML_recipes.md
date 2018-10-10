@@ -107,6 +107,9 @@ Reference
 [16] Aggarwal, C.C., 2015. Outlier analysis. In Data mining (pp. 237-263). Springer, Cham.
 
 https://github.com/yzhao062/Pyod#quick-start-for-outlier-detection
+https://www.datascience.com/blog/python-anomaly-detection
+http://aqibsaeed.github.io/2016-07-17-anomaly-detection/
+
 How would you go about investigating if a certain trend in a distribution is due to an anomaly?
 How would you estimate the impact Uber has on traffic and driving conditions?
 What metrics would you consider using to track if Uber’s paid advertising strategy to acquire new customers actually works? How would you then approach figuring out an ideal customer acquisition cost?
