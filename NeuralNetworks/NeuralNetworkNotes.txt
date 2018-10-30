@@ -1,0 +1,2 @@
+When working with neural networks, the three main topics that we deal with
+are: forward propagation, backpropagation, and activation functions.

@@ -16,3 +16,12 @@ print('z is {} '.format(z))
 a = 1.0 / (1.0 + np.exp(-z))
 
 print('a is {} '.format(a))
+
+
+
+Output :
+x1 is 0.5 and x2 is -0.35
+[0.55 0.45]
+[0.15]
+z is 0.2675
+a is 0.5664790559676278 
