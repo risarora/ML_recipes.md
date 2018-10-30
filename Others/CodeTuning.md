@@ -1,0 +1,6 @@
+### The need for speed
+After reading in our csv data as dataframes, we’ll use feather format 5 to write and read our dataframes to disk. Feather format reads/writes to disk as fast as reading/writing to memory.
+
+We can time our functions with `%time` in front of any function in your jupyter notebook and can measure how long it takes a function to run. In addition you can run `%prun` in front of any line of code in your notebook which runs a profiler that examines all the lines of code under the hood of that code statement. For example, we can convert dataframe to np.array float32 before given to RF. Random Forest will change the dataframe to numpy array anyway. Jeremy found out why his RF models were running slow because he ran %prun He found out that If you convert the dataframe to a numpy array once yourself, the regressor doesn’t have to do that each time. If you want to run multiple models, you’ll save that conversion time for each model.
+
+Profiling code is highly under-appreciated by data scientists. Although Jeremy didn’t write the sklearn Random Forest library, he learned how to make it run twice as fast. It’s worth exploring and experimenting on how to use profiler outputs.
