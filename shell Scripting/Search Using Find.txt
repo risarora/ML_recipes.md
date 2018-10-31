@@ -1,0 +1,9 @@
+### Search - Find
+``` shell
+find . -type f -exec stat --format '%n,%N,%o,%s,%x,%y,%z,%A,%U,%G' "{}" \; >> out.report
+find . -name '*.pdf' -exec chown someuser:somegroup {} +
+```
+grep -ri <String> <Location>
+<Location>  '.' for current folder
+
+grep -r -l "foo" /path/to/dir/*.c # Lists Names of File having strin 'foo'
