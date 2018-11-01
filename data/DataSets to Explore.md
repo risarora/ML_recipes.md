@@ -4,3 +4,9 @@ This database contains 12,417 images (1280X720) captured from two different park
 [Source](https://web.inf.ufpr.br/vri/databases/parking-lot-database/)
 
 ### 2. fashion MNSIT
+
+
+
+Remote Server
+AWS alternatives
+https://www.floydhub.com/pricing#powerups

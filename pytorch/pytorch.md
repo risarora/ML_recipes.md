@@ -98,3 +98,23 @@ plt.plot(x.detach().numpy(),x.grad.detach().numpy(),label='derivative')
 plt.legend()
 ```
 ![png](deraivative of x square.png)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import torch
+import pandas as pd
+import torch.nn.functional as F
+x=torch.linspace(-3,3,100,requires_grad=True)
+y=F.relu(x)
+
+plt.plot(x.detach().numpy(),Y.detach().numpy(),label='funtion')
+y=torch.sum(F.relu(x))
+y.backward()
+
+plt.plot(x.detach().numpy(),x.grad.detach().numpy(),label='derivative')
+plt.legend()
+
+
+================
