@@ -79,3 +79,22 @@ v.grad
 ```
 tensor(1.)
 ```
+
+
+# These are the libraries will be used for this lab.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import torch
+import pandas as pd
+
+x = torch.linspace(-10,10,10,requires_grad=True)
+Y = x**2
+y = torch.sum(x**2)
+y.backward()
+plt.plot(x.detach().numpy(),Y.detach().numpy(),label='funtion')
+plt.plot(x.detach().numpy(),x.grad.detach().numpy(),label='derivative')
+plt.legend()
+```
+![png](deraivative of x square.png)
