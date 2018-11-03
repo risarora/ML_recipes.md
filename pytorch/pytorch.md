@@ -106,15 +106,20 @@ import matplotlib.pyplot as plt
 import torch
 import pandas as pd
 import torch.nn.functional as F
-x=torch.linspace(-3,3,100,requires_grad=True)
-y=F.relu(x)
 
-plt.plot(x.detach().numpy(),Y.detach().numpy(),label='funtion')
-y=torch.sum(F.relu(x))
+# Take the derivative of Relu with respect to multiple value. Plot out the function and its derivative
+
+x = torch.linspace(-3, 3, 100, requires_grad = True)
+Y = F.relu(x)
+y = Y.sum()
 y.backward()
-
-plt.plot(x.detach().numpy(),x.grad.detach().numpy(),label='derivative')
+plt.plot(x.detach().numpy(), Y.detach().numpy(), label = 'function')
+plt.plot(x.detach().numpy(), x.grad.detach().numpy(), label = 'derivative')
+plt.xlabel('x')
 plt.legend()
+plt.show()
+
+```
 
 
-================
+![png](y-relu.png)
