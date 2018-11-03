@@ -1,6 +1,7 @@
 ## File Permissions
 
-File permissions of a linux are read, write and execute and the allocated to user group or everyone.= in that order.
+
+File permissions of a linux are <code>read</code>, <code>write</code> and/or <code>execute</code> and the allocated to <code>user</code>, <code>group</code> and <code>everyone</code> respectively.
 
 ### How not to forget file permissions
 permission code | r/w/x | decimal number | permissions
@@ -15,6 +16,7 @@ permission code | r/w/x | decimal number | permissions
 111|rwx|7 |read, write, and execute
 
 ### View File Permissions
+
 User can view a files permissions using <code>ls -l </code> command.
 
 **Example :**
@@ -34,7 +36,7 @@ r--|Everyone |Read only
 To change the permissions of a file or directory we use the <code>chmod</code> command. chmod takes three digits, each one representing the permissions for the user, group, and everyone. Thus, 741 would mean:
 
 permission code | r/w/x | Decimal number | Permissions| For
----|---|---| ---
+---|---|---|---|---
 111|rwx|7 |read, write, and execute |owner
 100|r--|4 |read | group
 001|--x|1 |execute | everyone
