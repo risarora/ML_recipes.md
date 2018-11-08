@@ -121,5 +121,4 @@ plt.show()
 
 ```
 
-
 ![png](y-relu.png)
