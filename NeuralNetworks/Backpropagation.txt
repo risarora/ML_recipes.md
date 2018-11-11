@@ -1,0 +1,183 @@
+
+In the previous videos, when discussing
+how neural networks make predictions
+using forward propagation, we assumed
+that the network had optimized weights
+and biases. But how do neural networks
+train and optimize their weights and
+biases for a given problem and data set?
+Training is done in a supervised
+learning setting, where each data point
+has a corresponding label or ground
+truth. And training is needed when the
+predicted value by the neural network
+obviously does not match the ground
+truth for a given input. The training
+process starts by calculating the error
+E between the predicted values and the
+ground truth labels. This error now
+represents the cost or the loss function
+that we discussed in the gradient
+descent video. Therefore, the next step
+would be to propagate this error back
+into the network and use it to perform
+gradient descent on the different
+weights and biases in the network, to
+optimize them using the same equations
+that we saw in the gradient descent
+video.
+
+So for our simple network with
+only two neurons and that takes one
+input, we calculate the squared error
+between the ground truth T and the
+predicted value a2. This represents our
+cost or loss function. Of course normally
+you don&#39;t train your network using one
+data point but thousands and thousands
+of data points. Therefore, the error is
+computed as the mean squared error
+calculated as follows. Then, we use the error
+to update w2, b2,  w1, and b1 by
+propagating the error back into the network.
+For updating w2, we know from our
+gradient descent video that we need to
+use this equation to do that, but since
+the error is not explicitly a function
+of w2, then we will need to use the chain
+rule to establish the derivative of the
+error with respect to w2. So we know that
+E is a function of
+a2, and we know that a2 is a function
+of z2, and z2 is a function of w2.
+Therefore, we can take the derivative of
+E with respect to a2, and take the
+derivative of a2 with respect to z2,
+and take the derivative of z2 with
+respect to w2. Then the derivative of
+the error with respect to w2 would be
+simply the product of these individual
+derivatives, like so. The derivative of E
+with respect to a2 is -(T - a2)
+and the derivative of a2 with respect
+to z2 is a2(1- a2) and the
+derivative of z2 with respect to w2 is
+just the input a1. Therefore, w2 is
+updated as per the following equation.
+I&#39;m assuming that you a&#39;re familiar with
+differentiation, so I am going to skip
+showing you how to find the derivatives,
+but below the video you will find a
+document that I prepared showing you in
+details how to find each of the
+derivatives shown here. Updating b2 is
+exactly the same. The only difference is
+the derivative of z2 with respect to b2
+is 1 and not the input a1. Similarly,
+we use this expression to update w1, but
+the error is not explicitly related to w1.
+So we again use the chain rule to
+establish the derivative of the error
+with respect to w1. We know that E is a
+function of a2, and we know that a2 is
+a function of z2 and z2 is a function
+of a1, and a1 is a function of z1, and
+z1 is a function of w1. Therefore, we
+can take the derivative of E with
+respect to a2, and take the derivative
+of a2 with respect to z2, and take the
+derivative of z2 with respect to a1,
+and take the derivative of a1 with
+respect to z1, and then finally take the
+derivative of z1 with respect to w1.
+Then the derivative
+of the error with respect to w1 would
+simply be the product of these
+individual derivatives, like so. The
+derivative of E with respect to a2 is
+-(T - a2). The derivative of a2
+with respect to z2 is a2(1 - a2),
+and the derivative of z2 with
+respect to a1 is w2, and the derivative
+of a1 with respect to z1 is a1(1 - a1),
+and the derivative of z1
+with respect to w1 is the input x1.
+Therefore, w1 is updated as per the
+following equation. Using the same
+approach we figure out the expression to
+update b1. Now let&#39;s apply back
+propagation to our example from the
+forward propagation video. Recall that we
+have a network of two neurons, with the
+initial values of the weights and the
+biases as shown. We apply forward
+propagation and we calculate the value
+of z1, which we found to be 0.415,
+and the value of a1,
+which we found to be 0.6023,
+the value of z2 which we
+found to be 0.9210, and
+the value of a2 which we found to
+be 0.7153. This
+is the predicted value by the network
+for an input of 0.1. Now let&#39;s
+assume that the ground truth is 0.25.
+We first compute the error between the
+ground truth and the predicted value.
+Next, we will start updating the weights
+and biases for either a predefined
+number of iterations or epochs, like
+1,000 for example, or until the error is
+within a predefined threshold of 0.001
+for example. Using a learning rate of
+0.4, let&#39;s see how the
+weights and the biases change after the
+first iteration. We already know the
+expression to update w2, so we simply
+plug in the
+values of T, a2, and a1 to calculate the
+gradient. The gradient of the error with
+respect to w2 is 0.05706, and
+therefore, w2 gets updated to 0.42.7
+We repeat the same thing for b2. We plug
+in the values of T and a 2 to calculate
+the gradient. The gradient of the error
+with respect to b2 is 0.0948, and
+therefore, b2 gets updated to 0.612.
+Similarly, for w1, we plug in the values
+of T, a2, and w2, a1, and x1 to
+calculate the gradient. The gradient of
+the error with respect to w1 is 0.001021,
+and therefore, w1 gets updated to
+0.1496. As for b1, the gradient of the
+error with respect to b1 is 0.01021,
+and therefore b1 gets updated to 0.3959.
+This completes the first iteration or
+epoch of the training process. With the
+updated weights and biases, we do another
+round of forward propagation calculate
+the predicted value and compare it to
+the ground truth. Calculate the error and
+do another round of backpropagation
+Therefore, to summarize the training
+algorithm: first, we initialize the
+weights and biases to random values. Then,
+we iteratively repeat the following
+steps: 1. Calculate the network
+output using forward propagation.
+2. Calculate the error between the
+ground truth and the estimated or
+predicted output of the network.
+3. Update the weights and the biases
+through backpropagation. Repeat the
+above three steps
+until the number of iterations or epochs
+is reached or the error between the
+ground truth and the predicted output is
+below a predefined threshold. In the next
+video, we will continue our discussion of
+the backpropagation algorithm and point
+out a serious shortcoming of the sigmoid
+function when used as the activation
+function in the hidden layers of deep
+networks.

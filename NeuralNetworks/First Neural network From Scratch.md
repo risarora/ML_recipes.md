@@ -1,3 +1,9 @@
+### First Neural Network
+
+<img src="./FirstNeuralNetworks.png" style="width:600px;height:200px;">
+
+
+
 
 ##### import the numpy package
 
@@ -15,7 +21,7 @@ print('x1 is {} and x2 is {}'.format(x_1, x_2))
 
 ```
 
-##### add the weights and bias 
+##### add the weights and bias
 
 
 ```python
