@@ -1,0 +1,720 @@
+0
+00:00:00,260 --> 00:00:05,250
+In the previous videos, when discussing
+
+1
+00:00:03,419 --> 00:00:07,890
+how neural networks make predictions
+
+2
+00:00:05,250 --> 00:00:09,960
+using forward propagation, we assumed
+
+3
+00:00:07,890 --> 00:00:13,049
+that the network had optimized weights
+
+4
+00:00:09,960 --> 00:00:14,940
+and biases. But how do neural networks
+
+5
+00:00:13,049 --> 00:00:18,170
+train and optimize their weights and
+
+6
+00:00:14,940 --> 00:00:20,550
+biases for a given problem and data set?
+
+7
+00:00:18,170 --> 00:00:22,890
+Training is done in a supervised
+
+8
+00:00:20,550 --> 00:00:25,529
+learning setting, where each data point
+
+9
+00:00:22,890 --> 00:00:28,260
+has a corresponding label or ground
+
+10
+00:00:25,529 --> 00:00:30,320
+truth. And training is needed when the
+
+11
+00:00:28,260 --> 00:00:32,640
+predicted value by the neural network
+
+12
+00:00:30,320 --> 00:00:36,390
+obviously does not match the ground
+
+13
+00:00:32,640 --> 00:00:39,120
+truth for a given input. The training
+
+14
+00:00:36,390 --> 00:00:42,149
+process starts by calculating the error
+
+15
+00:00:39,120 --> 00:00:45,149
+E between the predicted values and the
+
+16
+00:00:42,149 --> 00:00:47,280
+ground truth labels. This error now
+
+17
+00:00:45,149 --> 00:00:49,320
+represents the cost or the loss function
+
+18
+00:00:47,280 --> 00:00:52,469
+that we discussed in the gradient
+
+19
+00:00:49,320 --> 00:00:55,230
+descent video. Therefore, the next step
+
+20
+00:00:52,469 --> 00:00:57,510
+would be to propagate this error back
+
+21
+00:00:55,230 --> 00:00:59,699
+into the network and use it to perform
+
+22
+00:00:57,510 --> 00:01:01,829
+gradient descent on the different
+
+23
+00:00:59,699 --> 00:01:04,619
+weights and biases in the network, to
+
+24
+00:01:01,829 --> 00:01:06,810
+optimize them using the same equations
+
+25
+00:01:04,619 --> 00:01:11,820
+that we saw in the gradient descent
+
+26
+00:01:06,810 --> 00:01:14,010
+video. So for our simple network with
+
+27
+00:01:11,820 --> 00:01:16,860
+only two neurons and that takes one
+
+28
+00:01:14,010 --> 00:01:19,799
+input, we calculate the squared error
+
+29
+00:01:16,860 --> 00:01:24,450
+between the ground truth T and the
+
+30
+00:01:19,799 --> 00:01:28,170
+predicted value a2. This represents our
+
+31
+00:01:24,450 --> 00:01:30,390
+cost or loss function. Of course normally
+
+32
+00:01:28,170 --> 00:01:33,030
+you don&#39;t train your network using one
+
+33
+00:01:30,390 --> 00:01:35,850
+data point but thousands and thousands
+
+34
+00:01:33,030 --> 00:01:37,939
+of data points. Therefore, the error is
+
+35
+00:01:35,850 --> 00:01:41,790
+computed as the mean squared error
+
+36
+00:01:37,939 --> 00:01:46,409
+calculated as follows. Then, we use the error
+
+37
+00:01:41,790 --> 00:01:51,079
+to update w2, b2,  w1, and b1 by
+
+38
+00:01:46,409 --> 00:01:51,079
+propagating the error back into the network.
+
+39
+00:01:52,250 --> 00:01:57,479
+For updating w2, we know from our
+
+40
+00:01:55,590 --> 00:02:00,329
+gradient descent video that we need to
+
+41
+00:01:57,479 --> 00:02:02,460
+use this equation to do that, but since
+
+42
+00:02:00,329 --> 00:02:05,250
+the error is not explicitly a function
+
+43
+00:02:02,460 --> 00:02:07,920
+of w2, then we will need to use the chain
+
+44
+00:02:05,250 --> 00:02:11,459
+rule to establish the derivative of the
+
+45
+00:02:07,920 --> 00:02:13,700
+error with respect to w2. So we know that
+
+46
+00:02:11,459 --> 00:02:17,390
+E is a function of
+
+47
+00:02:13,700 --> 00:02:22,209
+a2, and we know that a2 is a function
+
+48
+00:02:17,390 --> 00:02:25,069
+of z2, and z2 is a function of w2.
+
+49
+00:02:22,209 --> 00:02:28,459
+Therefore, we can take the derivative of
+
+50
+00:02:25,069 --> 00:02:30,980
+E with respect to a2, and take the
+
+51
+00:02:28,459 --> 00:02:33,890
+derivative of a2 with respect to z2,
+
+52
+00:02:30,980 --> 00:02:37,190
+and take the derivative of z2 with
+
+53
+00:02:33,890 --> 00:02:39,799
+respect to w2. Then the derivative of
+
+54
+00:02:37,190 --> 00:02:42,019
+the error with respect to w2 would be
+
+55
+00:02:39,799 --> 00:02:45,410
+simply the product of these individual
+
+56
+00:02:42,019 --> 00:02:49,670
+derivatives, like so. The derivative of E
+
+57
+00:02:45,410 --> 00:02:53,000
+with respect to a2 is -(T - a2)
+
+58
+00:02:49,670 --> 00:02:58,430
+and the derivative of a2 with respect
+
+59
+00:02:53,000 --> 00:03:01,340
+to z2 is a2(1- a2) and the
+
+60
+00:02:58,430 --> 00:03:05,090
+derivative of z2 with respect to w2 is
+
+61
+00:03:01,340 --> 00:03:07,549
+just the input a1. Therefore, w2 is
+
+62
+00:03:05,090 --> 00:03:10,010
+updated as per the following equation.
+
+63
+00:03:07,549 --> 00:03:12,319
+I&#39;m assuming that you a&#39;re familiar with
+
+64
+00:03:10,010 --> 00:03:14,750
+differentiation, so I am going to skip
+
+65
+00:03:12,319 --> 00:03:17,480
+showing you how to find the derivatives,
+
+66
+00:03:14,750 --> 00:03:19,910
+but below the video you will find a
+
+67
+00:03:17,480 --> 00:03:22,190
+document that I prepared showing you in
+
+68
+00:03:19,910 --> 00:03:25,579
+details how to find each of the
+
+69
+00:03:22,190 --> 00:03:28,310
+derivatives shown here. Updating b2 is
+
+70
+00:03:25,579 --> 00:03:31,370
+exactly the same. The only difference is
+
+71
+00:03:28,310 --> 00:03:31,380
+the derivative of z2 with respect to b2
+
+72
+00:03:31,380 --> 00:03:40,100
+is 1 and not the input a1. Similarly,
+
+73
+00:03:36,139 --> 00:03:42,560
+we use this expression to update w1, but
+
+74
+00:03:40,100 --> 00:03:45,230
+the error is not explicitly related to w1.
+
+75
+00:03:42,560 --> 00:03:47,540
+So we again use the chain rule to
+
+76
+00:03:45,230 --> 00:03:51,319
+establish the derivative of the error
+
+77
+00:03:47,540 --> 00:03:54,739
+with respect to w1. We know that E is a
+
+78
+00:03:51,319 --> 00:03:57,799
+function of a2, and we know that a2 is
+
+79
+00:03:54,739 --> 00:04:01,790
+a function of z2 and z2 is a function
+
+80
+00:03:57,799 --> 00:04:05,959
+of a1, and a1 is a function of z1, and
+
+81
+00:04:01,790 --> 00:04:07,579
+z1 is a function of w1. Therefore, we
+
+82
+00:04:05,959 --> 00:04:10,549
+can take the derivative of E with
+
+83
+00:04:07,579 --> 00:04:14,060
+respect to a2, and take the derivative
+
+84
+00:04:10,549 --> 00:04:16,250
+of a2 with respect to z2, and take the
+
+85
+00:04:14,060 --> 00:04:19,010
+derivative of z2 with respect to a1,
+
+86
+00:04:16,250 --> 00:04:22,039
+and take the derivative of a1 with
+
+87
+00:04:19,010 --> 00:04:24,560
+respect to z1, and then finally take the
+
+88
+00:04:22,039 --> 00:04:26,240
+derivative of z1 with respect to w1.
+
+89
+00:04:24,560 --> 00:04:28,789
+Then the derivative
+
+90
+00:04:26,240 --> 00:04:30,530
+of the error with respect to w1 would
+
+91
+00:04:28,789 --> 00:04:34,340
+simply be the product of these
+
+92
+00:04:30,530 --> 00:04:36,860
+individual derivatives, like so. The
+
+93
+00:04:34,340 --> 00:04:41,360
+derivative of E with respect to a2 is
+
+94
+00:04:36,860 --> 00:04:44,840
+-(T - a2). The derivative of a2
+
+95
+00:04:41,360 --> 00:04:47,780
+with respect to z2 is a2(1 - a2),
+
+96
+00:04:44,840 --> 00:04:52,069
+and the derivative of z2 with
+
+97
+00:04:47,780 --> 00:04:55,490
+respect to a1 is w2, and the derivative
+
+98
+00:04:52,069 --> 00:04:59,210
+of a1 with respect to z1 is a1(1 - a1),
+
+99
+00:04:55,490 --> 00:05:02,349
+and the derivative of z1
+
+100
+00:04:59,210 --> 00:05:06,020
+with respect to w1 is the input x1.
+
+101
+00:05:02,349 --> 00:05:09,349
+Therefore, w1 is updated as per the
+
+102
+00:05:06,020 --> 00:05:11,599
+following equation. Using the same
+
+103
+00:05:09,349 --> 00:05:18,349
+approach we figure out the expression to
+
+104
+00:05:11,599 --> 00:05:20,330
+update b1. Now let&#39;s apply back
+
+105
+00:05:18,349 --> 00:05:23,000
+propagation to our example from the
+
+106
+00:05:20,330 --> 00:05:25,729
+forward propagation video. Recall that we
+
+107
+00:05:23,000 --> 00:05:27,650
+have a network of two neurons, with the
+
+108
+00:05:25,729 --> 00:05:30,710
+initial values of the weights and the
+
+109
+00:05:27,650 --> 00:05:32,990
+biases as shown. We apply forward
+
+110
+00:05:30,710 --> 00:05:35,780
+propagation and we calculate the value
+
+111
+00:05:32,990 --> 00:05:38,990
+of z1, which we found to be 0.415,
+
+112
+00:05:35,780 --> 00:05:41,930
+and the value of a1,
+
+113
+00:05:38,990 --> 00:05:45,710
+which we found to be 0.6023,
+
+114
+00:05:41,930 --> 00:05:47,599
+the value of z2 which we
+
+115
+00:05:45,710 --> 00:05:50,599
+found to be 0.9210, and
+
+116
+00:05:47,599 --> 00:05:54,770
+the value of a2 which we found to
+
+117
+00:05:50,599 --> 00:05:56,930
+be 0.7153. This
+
+118
+00:05:54,770 --> 00:06:01,310
+is the predicted value by the network
+
+119
+00:05:56,930 --> 00:06:03,620
+for an input of 0.1. Now let&#39;s
+
+120
+00:06:01,310 --> 00:06:07,729
+assume that the ground truth is 0.25.
+
+121
+00:06:04,960 --> 00:06:10,719
+We first compute the error between the
+
+122
+00:06:07,729 --> 00:06:13,430
+ground truth and the predicted value.
+
+123
+00:06:10,719 --> 00:06:15,889
+Next, we will start updating the weights
+
+124
+00:06:13,430 --> 00:06:18,469
+and biases for either a predefined
+
+125
+00:06:15,889 --> 00:06:21,949
+number of iterations or epochs, like
+
+126
+00:06:18,469 --> 00:06:25,219
+1,000 for example, or until the error is
+
+127
+00:06:21,949 --> 00:06:28,340
+within a predefined threshold of 0.001
+
+128
+00:06:25,219 --> 00:06:30,289
+for example. Using a learning rate of
+
+129
+00:06:28,340 --> 00:06:32,630
+0.4, let&#39;s see how the
+
+130
+00:06:30,289 --> 00:06:36,320
+weights and the biases change after the
+
+131
+00:06:32,630 --> 00:06:39,260
+first iteration. We already know the
+
+132
+00:06:36,320 --> 00:06:40,130
+expression to update w2, so we simply
+
+133
+00:06:39,260 --> 00:06:44,900
+plug in the
+
+134
+00:06:40,130 --> 00:06:47,810
+values of T, a2, and a1 to calculate the
+
+135
+00:06:44,900 --> 00:06:52,660
+gradient. The gradient of the error with
+
+136
+00:06:47,810 --> 00:06:59,950
+respect to w2 is 0.05706, and
+
+137
+00:06:52,660 --> 00:06:59,950
+therefore, w2 gets updated to 0.42.7
+
+138
+00:07:00,130 --> 00:07:07,670
+We repeat the same thing for b2. We plug
+
+139
+00:07:03,710 --> 00:07:10,220
+in the values of T and a 2 to calculate
+
+140
+00:07:07,670 --> 00:07:14,300
+the gradient. The gradient of the error
+
+141
+00:07:10,220 --> 00:07:21,130
+with respect to b2 is 0.0948, and
+
+142
+00:07:14,300 --> 00:07:21,130
+therefore, b2 gets updated to 0.612.
+
+143
+00:07:22,030 --> 00:07:32,210
+Similarly, for w1, we plug in the values
+
+144
+00:07:26,060 --> 00:07:34,850
+of T, a2, and w2, a1, and x1 to
+
+145
+00:07:32,210 --> 00:07:39,530
+calculate the gradient. The gradient of
+
+146
+00:07:34,850 --> 00:07:44,320
+the error with respect to w1 is 0.001021,
+
+147
+00:07:39,530 --> 00:07:51,410
+and therefore, w1 gets updated to
+
+148
+00:07:44,320 --> 00:07:55,940
+0.1496. As for b1, the gradient of the
+
+149
+00:07:51,410 --> 00:08:01,190
+error with respect to b1 is 0.01021,
+
+150
+00:07:55,940 --> 00:08:05,300
+and therefore b1 gets updated to 0.3959.
+
+151
+00:08:01,190 --> 00:08:08,300
+This completes the first iteration or
+
+152
+00:08:05,300 --> 00:08:10,940
+epoch of the training process. With the
+
+153
+00:08:08,300 --> 00:08:13,760
+updated weights and biases, we do another
+
+154
+00:08:10,940 --> 00:08:16,130
+round of forward propagation calculate
+
+155
+00:08:13,760 --> 00:08:18,920
+the predicted value and compare it to
+
+156
+00:08:16,130 --> 00:08:23,050
+the ground truth. Calculate the error and
+
+157
+00:08:18,920 --> 00:08:23,050
+do another round of backpropagation
+
+158
+00:08:23,110 --> 00:08:28,190
+Therefore, to summarize the training
+
+159
+00:08:25,310 --> 00:08:31,790
+algorithm: first, we initialize the
+
+160
+00:08:28,190 --> 00:08:33,830
+weights and biases to random values. Then,
+
+161
+00:08:31,790 --> 00:08:37,430
+we iteratively repeat the following
+
+162
+00:08:33,830 --> 00:08:40,460
+steps: 1. Calculate the network
+
+163
+00:08:37,429 --> 00:08:42,979
+output using forward propagation.
+
+164
+00:08:40,460 --> 00:08:44,990
+2. Calculate the error between the
+
+165
+00:08:42,979 --> 00:08:48,010
+ground truth and the estimated or
+
+166
+00:08:44,990 --> 00:08:50,240
+predicted output of the network.
+
+167
+00:08:48,010 --> 00:08:52,910
+3. Update the weights and the biases
+
+168
+00:08:50,240 --> 00:08:54,060
+through backpropagation. Repeat the
+
+169
+00:08:52,910 --> 00:08:56,310
+above three steps
+
+170
+00:08:54,060 --> 00:08:58,529
+until the number of iterations or epochs
+
+171
+00:08:56,310 --> 00:09:00,720
+is reached or the error between the
+
+172
+00:08:58,529 --> 00:09:06,000
+ground truth and the predicted output is
+
+173
+00:09:00,720 --> 00:09:08,520
+below a predefined threshold. In the next
+
+174
+00:09:06,000 --> 00:09:11,010
+video, we will continue our discussion of
+
+175
+00:09:08,520 --> 00:09:13,200
+the backpropagation algorithm and point
+
+176
+00:09:11,010 --> 00:09:15,420
+out a serious shortcoming of the sigmoid
+
+177
+00:09:13,200 --> 00:09:18,330
+function when used as the activation
+
+178
+00:09:15,420 --> 00:09:20,839
+function in the hidden layers of deep
+
+179
+00:09:18,330 --> 00:09:20,839
+networks.
+
