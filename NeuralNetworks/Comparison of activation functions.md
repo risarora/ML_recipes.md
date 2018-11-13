@@ -15,7 +15,7 @@ Is the cube root function suitable as a n activation function?
 There are a few traits that you want the activation function to have, and cube roots rate as OK-ish:
 
 Nonlinear – check.
-Continuously differentiable – no. There is a problem at x=0. Unlike other discontinuous functions like ReLU, although the gradient can be calculated near zero, it can be arbitrarily high as you approach x=0, because ddxx13=13x23
+Continuously differentiable – no. There is a problem at x=0. Unlike other discontinuous functions like ReLU, although the gradient can be calculated near zero, it can be arbitrarily high as you approach x=0, because d(x^1/3)/dx=1/(3*x^2/3)
 Range considerations – limited range functions are more stable, large/infinite range functions are more efficient. You may need to reduce learning rates compared to e.g. tanh.
 Monotonic – check.
 Monotonic derivative - no.
