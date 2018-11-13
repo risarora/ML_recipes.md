@@ -41,3 +41,13 @@ https://imaddabbura.github.io/post/coding_neural_network_fwd_bckwd_prop/
 
 #### Coding Neural Network — Forward Propagation and Backpropagtion
 https://towardsdatascience.com/coding-neural-network-forward-propagation-and-backpropagtion-ccf8cf369f76
+
+
+#### A Beginner's Guide to Neural Networks and Deep Learning
+https://skymind.ai/wiki/neural-network
+
+#### Hacker's guide to Neural Networks
+http://karpathy.github.io/neuralnets/
+
+### 45 Questions to test a data scientist on basics of Deep Learning (along with solution)
+https://www.analyticsvidhya.com/blog/2017/01/must-know-questions-deep-learning/
