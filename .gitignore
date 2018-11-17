@@ -1,3 +1,4 @@
 
 *.csv
 AMX/train.xlsx
+AMX/fastai/*
