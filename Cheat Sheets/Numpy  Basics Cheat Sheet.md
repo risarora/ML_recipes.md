@@ -36,6 +36,14 @@ The NumPy library is the core library for scientific computing in Python. It pro
 * _Create random int_<code> np.random.randint(5,size=(2,3)) </code> 2x3 array with random ints between 0-4
 
 
+#### Inspecting Your Array
+*  Array dimensions <code> a.shape</code>
+*  Length of array <code> len(a)</code>
+*  Number of array dimensions <code> b.ndim</code>
+*  Number of array elements <code> e.size</code>
+*  Data type of array elements <code> b.dtype</code>
+*  Name of data type <code> b.dtype.name</code>
+*  Convert an array to a different type <code> b.astype(int)</code>
 
 
 ### Array Mathematics
@@ -235,17 +243,6 @@ I/O
 * <code> np.save('my_array', a) </code>    
 * <code> np.savez('array.npz', a, b) </code>    
 * <code> np.load('my_array.npy') </code>    
-
-#### Inspecting Your Array
-*  Array dimensions <code> a.shape</code>
-*  Length of array <code> len(a)</code>
-*  Number of array dimensions <code> b.ndim</code>
-*  Number of array elements <code> e.size</code>
-*  Data type of array elements <code> b.dtype</code>
-*  Name of data type <code> b.dtype.name</code>
-*  Convert an array to a different type <code> b.astype(int)</code>
-
-
 
 #### Sorting Arrays
   * Sort an array <code> a.sort() </code>
