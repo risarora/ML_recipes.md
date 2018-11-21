@@ -5,13 +5,13 @@ The NumPy library is the core library for scientific computing in Python. It pro
 <code> import numpy as np </code>
 
 ### Data Types
-* np.int64 **:** *Signed 64-bit integer types  *
-* np.float32  **:** *Standard double-precision floating point*  
-* np.complex  **:** *Complex numbers represented by 128 floats*  
-* np.bool  **:** *Boolean type storing TRUE and FALSE values*  
-* np.object  **:** *Python object type*  
-* np.string_  **:** *Fixed-length string type*  
-* np.unicode_  **:** *Fixed-length unicode type*  
+* np.int64 *:* *Signed 64-bit integer types  *
+* np.float32  *:* *Standard double-precision floating point*  
+* np.complex  *:* *Complex numbers represented by 128 floats*  
+* np.bool  *:* *Boolean type storing TRUE and FALSE values*  
+* np.object  *:* *Python object type*  
+* np.string_  *:* *Fixed-length string type*  
+* np.unicode_  *:* *Fixed-length unicode type*  
 
 
 ### Creating Arrays
