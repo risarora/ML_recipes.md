@@ -88,9 +88,9 @@ array([[False, True, True],
 ```
 
  #### Copying Arrays
- * <code> h = a.view() Create a view of the array with the same data </code>    
- * <code> np.copy(a) Create a copy of the array </code>    
- * <code> h = a.copy() Create a deep copy of the array </code>    
+ * Create a view of the array with the same data: <code> h = a.view()</code>
+ * Create a copy of the array: <code> np.copy(a)</code>
+ * Create a deep copy of the array: <code> h = a.copy()</code>
 
 ### Array Manipulation
 
@@ -109,30 +109,74 @@ array([[False, True, True],
 * Delete items from an array -<code> np.delete(a,[1]) </code>
 
 ##### Combining Arrays
-<code> np.concatenate((a,d),axis=0) Concatenate arrays </code>
- array([ 1, 2, 3, 10, 15, 20])
-<code> np.vstack((a,b)) Stack arrays vertically (row-wise) </code>
- array([[ 1. , 2. , 3. ],
- [ 1.5, 2. , 3. ],
- [ 4. , 5. , 6. ]])
-<code> np.r_[e,f] Stack arrays vertically (row-wise) </code>
-<code> np.hstack((e,f)) Stack arrays horizontally (column-wise) </code>
- array([[ 7., 7., 1., 0.],
- [ 7., 7., 0., 1.]])
-<code> np.column_stack((a,d)) Create stacked column-wise arrays </code>
- array([[ 1, 10],
- [ 2, 15],
- [ 3, 20]])
-<code> np.c_[a,d] Create stacked column-wise arrays </code>
- Splitting Arrays
-<code> np.hsplit(a,3) Split the array horizontally at the 3rd </code>
- [array([1]),array([2]),array([3])] index
-<code> np.vsplit(c,2) Split the array vertically at the 2nd index </code>
-[array([[[ 1.5, 2. , 1. ],
- [ 4. , 5. , 6. ]]]),
- array([[[ 3., 2., 3.],
- [ 4., 5., 6.]]])]
 
+* Concatenate Arrays
+
+```
+np.concatenate((a,d),axis=0)
+Concatenate arrays
+ array([ 1, 2, 3, 10, 15, 20])
+```
+
+* Vertically Stack the arrays
+
+```
+np.vstack((a,b))
+Stack arrays vertically (row-wise)
+ array([[ 1. , 2. , 3. ],
+        [ 1.5, 2. , 3. ],
+        [ 4. , 5. , 6. ]])
+```
+
+* Stack arrays vertically (row-wise)
+
+```
+np.r_[e,f]
+
+```
+
+* Stack arrays horizontally (column-wise)
+
+```
+np.hstack((e,f))
+
+array([[ 7., 7., 1., 0.],
+        [ 7., 7., 0., 1.]])
+ ```
+
+* Create stacked column-wise arrays
+
+```
+np.column_stack((a,d))
+ array([[ 1, 10],
+        [ 2, 15],
+        [ 3, 20]])
+ ```
+
+* Create stacked column-wise arrays
+
+```
+np.c_[a,d]
+```
+
+##### Splitting Arrays
+* Split the array horizontally
+```
+np.hsplit(a,3)
+Split the array horizontally at the 3rd
+[array([1]),array([2]),array([3])] index
+```
+* Split the array vertically
+```
+np.vsplit(c,2)
+Split the array vertically at the 2nd index
+  [
+  array([[[ 1.5, 2. , 1. ],
+          [ 4. , 5. , 6. ]]]),
+  array([[[ 3., 2., 3.],
+          [ 4., 5., 6.]]])
+  ]
+```
 #### Subsetting, Slicing, Indexing
 
 ##### Subsetting
