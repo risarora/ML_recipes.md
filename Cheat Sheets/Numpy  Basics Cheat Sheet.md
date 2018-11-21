@@ -25,15 +25,15 @@ The NumPy library is the core library for scientific computing in Python. It pro
 ### Creating placeholder Arrays
 
 * _Create an array of zeros_<code> np.zeros((3,4)) </code>
-* ** Create an array of ones **<code> np.ones((2,3,4),dtype=np.int16) </code>
-* ** Create an array of evenly spaced values (step value) **<code> d = np.arange(10,25,5) </code>
-* ** Create an array of evenly spaced values (number of samples) **<code> np.linspace(0,2,9) </code>
-* ** Create a constant array **<code> e = np.full((2,2),7) </code>
-* ** Create a 2X2 identity matrix **<code> f = np.eye(2) </code>
-* ** Create an array with random values **<code> np.random.random((2,2)) </code>
-* ** Create an empty array **<code> np.empty((3,2)) </code>
-* ** Create random arrays **<code> np.random.rand(6,7)*100 </code> floats between 0-100
-* ** Create random int **<code> np.random.randint(5,size=(2,3)) </code> 2x3 array with random ints between 0-4
+* _Create an array of ones_<code> np.ones((2,3,4),dtype=np.int16) </code>
+* _Create an array of evenly spaced values (step value)_<code> d = np.arange(10,25,5) </code>
+* _Create an array of evenly spaced values (number of samples)_<code> np.linspace(0,2,9) </code>
+* _Create a constant array_<code> e = np.full((2,2),7) </code>
+* _Create a 2X2 identity matrix_<code> f = np.eye(2) </code>
+* _Create an array with random values_<code> np.random.random((2,2)) </code>
+* _Create an empty array_<code> np.empty((3,2)) </code>
+* _Create random arrays_<code> np.random.rand(6,7)*100 </code> floats between 0-100
+* _Create random int_<code> np.random.randint(5,size=(2,3)) </code> 2x3 array with random ints between 0-4
 
 
 
