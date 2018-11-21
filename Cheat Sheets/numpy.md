@@ -32,6 +32,11 @@ The NumPy library is the core library for scientific computing in Python. It pro
 * ** Create a 2X2 identity matrix **<code> f = np.eye(2) </code>
 * ** Create an array with random values **<code> np.random.random((2,2)) </code>
 * ** Create an empty array **<code> np.empty((3,2)) </code>
+* ** Create random arrays **<code> np.random.rand(6,7)*100 </code> floats between 0-100
+* ** Create random int **<code> np.random.randint(5,size=(2,3)) </code> 2x3 array with random ints between 0-4
+
+
+
 
 ### Array Mathematics
 
