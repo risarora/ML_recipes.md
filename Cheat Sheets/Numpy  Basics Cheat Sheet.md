@@ -264,3 +264,6 @@ I/O
  -->  
 ##### Asking For Help
  * <code> np.info(np.ndarray.dtype) </code>
+
+References:
+TODO : [Quadrl](https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+Pandas,+SciPy,+NumPy+Cheat+Sheet.pdf)
