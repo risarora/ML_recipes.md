@@ -24,7 +24,7 @@ The NumPy library is the core library for scientific computing in Python. It pro
 
 ### Creating placeholder Arrays
 
-* ** Create an array of zeros **<code> np.zeros((3,4)) </code>
+* _Create an array of zeros_<code> np.zeros((3,4)) </code>
 * ** Create an array of ones **<code> np.ones((2,3,4),dtype=np.int16) </code>
 * ** Create an array of evenly spaced values (step value) **<code> d = np.arange(10,25,5) </code>
 * ** Create an array of evenly spaced values (number of samples) **<code> np.linspace(0,2,9) </code>
