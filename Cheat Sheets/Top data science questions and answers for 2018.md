@@ -242,3 +242,4 @@ Imagine you’re climbing a staircase that contains n stairs, and you can take a
 * https://www.learndatasci.com/data-science-interview-questions/
 * https://www.learndatasci.com/free-data-science-books/
 * https://developers.google.com/machine-learning/crash-course/prereqs-and-prework
+* https://www.udemy.com/data-science-and-machine-learning-with-python-hands-on/
