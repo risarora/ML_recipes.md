@@ -35,8 +35,11 @@ df[:2]
 df[df['coverage'] > 50]
 
 ```
+## Filter based on multiple conditions
 ### View Rows Where Coverage Is Greater Than 50 And cgpa Less Than 3.5
 
 ```
 df[(df['coverage']  > 50) & (df['cgpa'] < 4)]
 ```
+
+
