@@ -11,8 +11,8 @@ import seaborn as sns
 
 The basic steps to creating plots with Seaborn are:
  1. [ Prepare some data ](## 1. Data)
- 2. [Control figure aesthetics]()
- 3. [Plot with Seaborn]()
+ 2. [Control figure aesthetics](## 2. Figure Aesthetics)
+ 3. [Plot with Seaborn](## 3.  Plotting with Seaborn)
  4. [Further customize your plot]()
 
 ```
@@ -183,5 +183,46 @@ Distribution Plots
  kind='kde')
 Matrix Plots
 >>> sns.heatmap(uniform_data,vmin=0,vmax=1) Heatmap
+
+>>> plt.title("A Title") Add plot title
+>>> plt.ylabel("Survived") Adjust the label of the y-axis
+>>> plt.xlabel("Sex") Adjust the label of the x-axis
+>>> plt.ylim(0,100) Adjust the limits of the y-axis
+>>> plt.xlim(0,10) Adjust the limits of the x-axis
+>>> plt.setp(ax,yticks=[0,5]) Adjust a plot property
+>>> plt.tight_layout() Adjust subplot params
+>>> plt.show() Show the plot
+>>> plt.savefig("foo.png") Save the plot as a figure
+>>> plt.savefig("foo.png", Save transparent figure
+ transparent=True)
+>>> sns.regplot(x="sepal_width", Plot data and a linear regression
+ y="sepal_length", model fit
+ data=iris,
+ ax=ax)
+>>> g.despine(left=True) Remove left spine
+>>> g.set_ylabels("Survived") Set the labels of the y-axis
+>>> g.set_xticklabels(rotation=45) Set the tick labels for x
+>>> g.set_axis_labels("Survived", Set the axis labels
+ "Sex")
+>>> h.set(xlim=(0,5), Set the limit and ticks of the
+ ylim=(0,5), x-and y-axis
+ xticks=[0,2.5,5],
+ yticks=[0,2.5,5])
+Close & Clear
+>>> plt.cla() Clear an axis
+>>> plt.clf() Clear an entire figure
+>>> plt.close() Close a window
+5
+Also see Lists, NumPy & Pandas
+Also see Matplotlib
+Also see Matplotlib
+Also see Matplotlib
+Also see Matplotlib
+
+Axisgrid Objects
+
+
+Plot
+
 
 -->
