@@ -1,0 +1,70 @@
+### Unix Filter Commands
+
+* <code>grep:</code> Find lines in stdin that match a pattern and print them to stdout.
+* <code>sort:</code> Sort the lines in stdin, and print the result to stdout.
+* <code>uniq:</code> Read from stdin and print unique (that are different from the adjacent line) to stdout.
+* <code>cat:</code> Read lines from stdin (and more files), and concatenate them to stdout.
+* <code>more:</code> Read lines from stdin, and provide a paginated view to stdout.
+* <code>cut:</code> Cut specified byte, character or field from each line of stdin and print to stdout.
+* <code>paste:</code> Read lines from stdin (and more files), and paste them together line-by-line to stdout.
+* <code>head:</code> Read the first few lines from stdin (and more files) and print them to stdout.
+* <code>tail:</code> Read the last few lines from stdin (and more files) and print them to stdout.
+* <code>wc:</code> Read from stdin, and print the number of newlines, words, and bytes to stdout.
+* <code>tr:</code> Translate or delete characters read from stdin and print to stdout.
+
+
+Command	grep - It is a command for pattern searching in a file and prints those lines containing that specified pattern. If the file name is not mentioned, grep searches in stdin.
+Common Syntax	$ grep [option] pattern [filename …]
+Example	$ grep ‘[A-M]’ file1
+Prints those lines which contains capital letters in the range of A to M
+Command	wc - It is a command to count the number of lines, words and characters in a file
+Common Syntax	$ wc [OPTION] ….[FILE]
+Example	$ cat file1
+Hello
+How do you do
+$ wc file1
+2 5 20 file1
+
+No of lines-2
+No of words-5
+No of characters(bytes)-20
+Command	more - This command is used to display the page one screen at a time
+Common Syntax	more [options] file…
+Example	$ls -l | more
+Will display long listing of files and directories one screen at a time
+Command	paste: this command is used to paste the contents of two files.
+Common Syntax:	paste [OPTION] ….[FILE]….
+Example:	paste file1 file2
+This command will combine the contents of file1 and file2
+
+
+Command	tr – this command is used to translate the characters in a file in some other forms like squeezing the repetitive characters and replacing it with the single occurrence of that character or deleting a character. This can be achieved by using different options available with the tee command.
+Common Syntax:	tr [OPTION] ……SET1[SET2]
+Example1:	tr -d ‘,’ < file1
+This command will delete all the occurrence of comma(“,”) from the file file1
+Example 2	$ tr -d “hello” < file1
+This command will delete all the occurrence of any of the characters h or e or l or o from the file fle1
+Command	tee – this command is used to read the input from stdin and redirect the output to the stdout i.e. display screen as well as to the specified files at the same time. It is primarily used in conjunction with pipes and filters.
+Common Syntax:	tee[OPTION]….[FILE]
+Example	$ cat file1|tee filenew
+This command will display the contents of file1 on the display screen and it will also be saved in filenew which can be viewed by the command cat filenew
+Unix sed and awk Text Processing Utilities
+Unix provides sed and awk as two text processing utilities that work on a line-by-line basis. The sed program (stream editor) works well with character-based processing, and the awk program (Aho, Weinberger, Kernighan) works well with delimited field processing.
+
+Both use regular expressions to find patterns and support commands to process the matches.
+
+Command	awk – this command is a useful and powerful command used for pattern matching as well as for text processing.
+Common Syntax	awk [options] ‘program text’ file
+Example	$ls -l | awk ‘{print $3}’
+This command will display only the third column from the long listing of files and directories.
+Command	sed – this is a powerful command for editing a ‘stream’ of text. It can read input from a text file or from piped input, and process the input in one pass..
+Common Syntax	sed[OPTION]…..[-f][file]
+Example1	sed -n ‘/hello/p’ file1
+This command will display all the lines which contains hello
+Example2	sed ‘s/hello/HELLO/’ file1
+This command will substitute hello with HELLO everywhere in the file.
+Example3	sed ‘/hello/,+2d’ file1
+This command will delete the two lines starting with the first match of ‘hello’
+
+
+Source : [www.softwaretestinghelp.com](link=https://www.softwaretestinghelp.com/unix-text-processing-commands/)
