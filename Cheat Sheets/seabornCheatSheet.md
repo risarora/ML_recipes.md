@@ -10,9 +10,9 @@ import seaborn as sns
 ```
 
 The basic steps to creating plots with Seaborn are:
- 1. [ Prepare some data ](## 1. Data)
- 2. [Control figure aesthetics](## 2. Figure Aesthetics)
- 3. [Plot with Seaborn](## 3.  Plotting with Seaborn)
+ 1. [Prepare some data ](#1-data)
+ 2. [Control figure aesthetics](#2-figure-aesthetics)
+ 3. [Plot with Seaborn](#3--plotting-with-seaborn)
  4. [Further customize your plot]()
 
 ```
