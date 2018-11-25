@@ -29,7 +29,7 @@ plt.show(g)                     ### 4. Customize
 
 ```
 
-## 1. Data
+## <a name="#1-data"></a>1. Data
 
 ```
 import pandas as pd
@@ -46,7 +46,7 @@ titanic = sns.load_dataset("titanic")
 iris = sns.load_dataset("iris")
 ```
 
-## 2. Figure Aesthetics
+## <a name="#2-figure-aesthetics"></a>2. Figure Aesthetics
 
 * Create a figure and one subplot
 ```
@@ -99,7 +99,7 @@ sns.set_palette(flatui)
 ```
 
 
-## 3.  Plotting with Seaborn
+## <a name="#3--plotting-with-seaborn"></a>3.  Plotting with Seaborn
 
 #### Axis Grids
 
