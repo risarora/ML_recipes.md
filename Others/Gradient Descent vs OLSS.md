@@ -62,3 +62,21 @@ You have <code>m training examples</code> and <code>n features</code>.
 * If n is relatively small ( on the order of a hundred ~ ten thousand ), then the normal equation
 
 [stackexchange](https://datascience.stackexchange.com/questions/14118/linear-regression-lms-with-gradient-descent-vs-normal-equations/14119)
+
+
+When you use the normal equations for solving the cost function analytically you have to compute:
+
+β=(X′X)−1X′Y
+
+Where X is your matrix of input observations and y your output vector. The problem with this operation is the time complexity of calculating the inverse of a nxn matrix which is O(n^3) and as n increases it can take a very long time to finish.
+
+When n is low (n < 1000 or n < 10000) you can think of normal equations as the better option for calculation theta, however for greater values Gradient Descent is much more faster, so the only reason is the time :)
+
+https://stackoverflow.com/questions/18191890/why-gradient-descent-when-we-can-solve-linear-regression-analytically
+
+https://stats.stackexchange.com/questions/278755/why-use-gradient-descent-for-linear-regression-when-a-closed-form-math-solution
+
+
+<img src="../images/Others/OLS.png"/>
+
+https://towardsdatascience.com/linear-regression-simplified-ordinary-least-square-vs-gradient-descent-48145de2cf76
