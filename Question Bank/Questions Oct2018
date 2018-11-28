@@ -1,0 +1,21 @@
+1.	What is the Central Limit Theorem and why is it important?
+CLT states that if we sample from a population using a sufficiently large sample size, the mean of the samples (also known as the sample population) will be normally distributed (assuming true random sampling). What’s especially important is that this will be true regardless of the distribution of the original population.
+Intuition :
+When I first saw an example of the Central Limit Theorem like this, I didn’t really understand why it worked. The best intuition that I have come across involves the example of flipping a coin. Suppose that we have a fair coin and we flip it 100 times. If we observed 48 heads and 52 tails we would probably not be very surprised. Similarly, if we observed 40 heads and 60 tails, we would probably still not be very surprised, though it might seem more rare than the 48/52 scenario. However, if we observed 20 heads and 80 tails we might start to question the fairness of the coin.
+This is essentially what the normal-ness of the sample distribution represents. For the coin example, we are likely to get about half heads and half tails. Outcomes farther away from the expected 50/50 result are less likely, and thus less expected. The normal distribution of the sampling distribution captures this concept.
+The mean of the sampling distribution will approximate the mean of the true population distribution. Additionally, the variance of the sampling distribution is a function of both the population variance and the sample size used. A larger sample size will produce a smaller sampling distribution variance. This makes intuitive sense, as we are considering more samples when using a larger sample size, and are more likely to get a representative sample of the population. So roughly speaking, if the sample size used is large enough, there is a good chance that it will estimate the population pretty well. Most sources state that for most applications N = 30 is sufficient.
+These principles can help us to reason about samples from any population. Depending on the scenario and the information available, the way that it is applied may vary. For example, in some situations we might know the true population mean and variance, which would allow us to compute the variance of any sampling distribution. However, in other situations, such as the original problem we discussed of estimating average human height, we won’t know the true population mean and variance. Understanding the nuances of sampling distributions and the Central Limit Theorem is an essential first step toward talking many of these problems.
+
+https://github.com/mattnedrich/CentralLimitTheoremDemo
+
+
+2.	What is sampling? How many sampling methods do you know?
+3.	What is the difference between Type I vs Type II error?
+4.	What is linear regression? What do the terms P-value, coefficient, R-Squared value mean? What is the significance of each of these components?
+
+5.	What are the assumptions required for linear regression?There are four major assumptions:
+o	1. There is a linear relationship between the dependent variables and the regressors, meaning the model you are creating actually fits the data,
+o	2. The errors or residuals of the data are normally distributed and independent from each other,
+o	3. There is minimal multicollinearity between explanatory variables, and
+o	4. Homoscedasticity. This means the variance around the regression line is the same for all values of the predictor variable.
+6.	What is a statistical interaction?
