@@ -33,12 +33,15 @@ mistake on the minority class
 * Comparison
 * All-vs.-all tends to be more robust than one-vs.-all
 
+
+[source](http://www.cs.ucr.edu/~epapalex/teaching/171_S18/slides/05d-classification-advanced.pdf.html)
+
 ## Active Learning
 1. Unlabeled points
 2. Supervised learning
 3. Semisupervised and active learning
 
-Class labels are expensive to obtain
+### Class labels are expensive to obtain
 * Solution: query human (oracle) for labels
 * Pool-based approach: Uses a pool of unlabeled data
 * L: a small subset of D is labeled, U: a pool of unlabeled data in D
@@ -56,8 +59,4 @@ instances queried (# of tuples to be queried should be small)
   * Fit a classifier to the labeled data
   * Query the data point closest to the boundary
 
-
-
-[source]
-http://www.cs.ucr.edu/~epapalex/teaching/171_S18/slides/05d-classification-advanced.pdf
-http://hunch.net/~active_learning/
+[source](http://hunch.net/~active_learning/)
