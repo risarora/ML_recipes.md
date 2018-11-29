@@ -3,8 +3,11 @@
 ## Portfolios
 https://www.ritchieng.com/
 https://chrisalbon.com/python/data_wrangling/pandas_time_series_basics/
+https://www.vipinajayakumar.com/
 
 ## BLogs
+* Parsing text with Python
+  * https://www.vipinajayakumar.com/parsing-text-with-python/
 
 ### Deep Learning
 
