@@ -1,0 +1,47 @@
+Backbone of the blockchain : public key private key cryptographyBackbone of the blockchain : public key private key cryptography
+
+Public-key encryption is a cryptographic system that uses two keys -- a public key known to everyone and a private or secret key known only to the recipient of the message.
+
+Example
+An example of generating RSA Key pair is given below. (For ease of understanding, the primes p & q taken here are small values. Practically, these values are very high).
+
+Let two primes be p = 7 and q = 13. Thus, modulus n = pq = 7 x 13 = 91.
+
+Select e = 5, which is a valid choice since there is no number that is common factor of 5 and (p − 1)(q − 1) = 6 × 12 = 72, except for 1.
+
+The pair of numbers (n, e) = (91, 5) forms the public key and can be made available to anyone whom we wish to be able to send us encrypted messages.
+
+Input p = 7, q = 13, and e = 5 to the Extended Euclidean Algorithm. The output will be d = 29.
+
+Check that the d calculated is correct by computing −
+
+de = 29 × 5 = 145 = 1 mod 72
+Hence, public key is (91, 5) and private keys is (91, 29).
+
+Encryption and Decryption
+Once the key pair has been generated, the process of encryption and decryption are relatively straightforward and computationally easy.
+
+Interestingly, RSA does not directly operate on strings of bits as in case of symmetric key encryption. It operates on numbers modulo n. Hence, it is necessary to represent the plaintext as a series of numbers less than n.
+
+RSA Encryption
+Suppose the sender wish to send some text message to someone whose public key is (n, e).
+
+The sender then represents the plaintext as a series of numbers less than n.
+
+To encrypt the first plaintext P, which is a number modulo n. The encryption process is simple mathematical step as −
+
+C = Pe mod n
+In other words, the ciphertext C is equal to the plaintext P multiplied by itself e times and then reduced modulo n. This means that C is also a number less than n.
+
+Returning to our Key Generation example with plaintext P = 10, we get ciphertext C −
+
+C = 105 mod 91
+RSA Decryption
+The decryption process for RSA is also very straightforward. Suppose that the receiver of public-key pair (n, e) has received a ciphertext C.
+
+Receiver raises C to the power of his private key d. The result modulo n will be the plaintext P.
+
+Plaintext = Cd mod n
+Returning again to our numerical example, the ciphertext C = 82 would get decrypted to number 10 using private key 29 −
+
+Plaintext = 8229 mod 91 = 10
