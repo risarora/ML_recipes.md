@@ -1,0 +1,93 @@
+#!/bin/sh
+show_menu(){
+    NORMAL=`echo "\033[m"`
+    MENU=`echo "\033[36m"` #Blue
+    NUMBER=`echo "\033[33m"` #yellow
+    FGRED=`echo "\033[41m"`
+    RED_TEXT=`echo "\033[31m"`
+    ENTER_LINE=`echo "\033[33m"`
+    echo -e "${MENU}*********************************************${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 1)${MENU} Execute the Grep  ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 2)${MENU} Join ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 3)${MENU} MLCP ${NORMAL}"
+#   echo -e "${MENU}**${NUMBER} 4)${MENU} ${NORMAL}"
+    echo -e "${MENU}*********************************************${NORMAL}"
+    echo -e "${ENTER_LINE}Please enter a menu option and enter or ${RED_TEXT}enter to exit. ${NORMAL}"
+    read opt
+}
+function option_picked() {
+    COLOR='\033[01;31m' # bold red
+    RESET='\033[00;00m' # normal white
+    MESSAGE=${@:-"${RESET}Error: No message passed"}
+    echo -e "${COLOR}${MESSAGE}${RESET}"
+}
+
+clear
+show_menu
+
+
+while true; do
+	read opt
+    case $opt in
+        1) clear;
+			option_picked "Option 1 Picked";
+			echo "Execute the Grep Comands"
+			sleep1
+			clear
+			continue    
+			;;
+
+        2) clear;
+            option_picked "Option 2 Picked";
+			echo "Execute the JOIN Comands"
+			sleep1
+			clear
+			continue
+			;;
+
+        3) clear;
+            option_picked "Option 3 Picked";
+			echo "Execute the MLCP Comands"
+			sleep1
+			clear
+			continue
+			;;
+			
+		4)
+			echo "Exiting..."
+			sleep 1
+			break
+			;;
+
+		*)
+			echo "Invalid Input";
+			sleep 1
+			clear
+			continue
+			;;
+
+	esac
+done
+
+
+
+
+
+if [ "$INDIVIDUAL" == "YES" ]; then
+
+
+fi
+if [ "$INDIVIDUALMEMBERSHIP" == "YES" ]; then
+
+
+fi
+if [ "$MEMBERSHIP" == "YES" ]; then
+
+
+fi
+if [ "$INDIVIDUAL" == "YES" ]; then
+
+
+fi
+
+https://www.cyberciti.biz/faq/unix-linux-bash-script-check-if-variable-is-empty/
