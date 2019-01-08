@@ -37,5 +37,20 @@ fi
 
 ```
 
+
+Other Variations
+
+Note: Be careful, leave empty spaces on either side of both opening and closing braces.
+
+With the same syntax you can use:
+
+ * -e: any kind of archive 
+ * -f: file 
+ * -h: symbolic link 
+ * -r: readable file 
+ * -w: writable file 
+ * -x: executable file 
+ * -s: file size greater than zero 
+
 source
 https://stackoverflow.com/questions/59838/check-if-a-directory-exists-in-a-shell-script
