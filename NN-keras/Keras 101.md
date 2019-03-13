@@ -270,18 +270,19 @@ And there's the problem. The y_train and y_test data are not split into 10 disti
 We can fix this easily:
 
 Preprocess class labels
-```
 
+```
 # Convert 1-dimensional class arrays to 10-dimensional class matrices
 Y_train = np_utils.to_categorical(y_train, 10)
 Y_test = np_utils.to_categorical(y_test, 10)
+```
 Now we can take another look:
 
 ```
 print Y_train.shape
 # (60000, 10)
-There we go... much better!
 ```
+There we go... much better!
 
 #### Step 7:  Define model architecture.
 
@@ -293,14 +294,17 @@ Plus, when you're just starting out, you can just replicate proven architectures
 
 Let's start by declaring a sequential model format:
 
-Declare Sequential modelPython
-1
+```
+# Declare Sequential model
 model = Sequential()
+```
 Next, we declare the input layer:
 
-CNN input layerPython
-1
+```
+# CNN input layer
 model.add(Convolution2D(32, 3, 3, activation='relu', input_shape=(1,28,28)))
+```
+
 The input shape parameter should be the shape of 1 sample. In this case, it's the same (1, 28, 28) that corresponds to  the (depth, width, height) of each digit image.
 
 But what do the first 3 parameters represent? They correspond to the number of convolution filters to use, the number of rows in each convolution kernel, and the number of columns in each convolution kernel, respectively.
@@ -356,6 +360,7 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(10, activation='softmax'))
 ```
+
 Now all we need to do is define the loss function and the optimizer, and then we'll be ready to train it.
 
 #### Step 8: Compile model.
@@ -396,10 +401,10 @@ You can also use a variety of callbacks to set early-stopping rules, save model 
 
 Finally, we can evaluate our model on the test data:
 
-Evaluate Keras model
-Python
-1
+```
+# Evaluate Keras model
 score = model.evaluate(X_test, Y_test, verbose=0)
+```
 Congratulations... you've made it to the end of this Keras tutorial!
 
 We've just completed a whirlwind tour of Keras's core functionality, but we've only really scratched the surface. Hopefully you've gained the foundation to further explore all that Keras has to offer.
