@@ -1,5 +1,4 @@
-Docker for data science, building a simple jupyter container
-10 OCT 2017 • 21 mins read
+## Docker for data science, building a simple jupyter container
 https://tsaprailis.com/2017/10/10/Docker-for-data-science-part-1-building-jupyter-container/
 
 This is the first in a series of posts where I’ll be noting down my findings while exploring Docker and how and if it can help for everything Data Science related. In this post I’ll try to build a simple container that will have a jupyter notebook installed.
@@ -317,9 +316,9 @@ $ docker logs elastic_curran
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8888/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
+```
 Now let’s create a new notebook called test and save it locally (on the container). Then I will stop the container and remove it altogether:
-
+```
 $ docker stop elastic_curran
 elastic_curran
 $ docker rm elastic_curran
