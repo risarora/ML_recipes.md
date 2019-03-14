@@ -94,7 +94,7 @@ Usually the first command in a dockerfile is a FROM command. This defines a base
 To find available base images the best place is the Docker store. Most of the images there are free, however there are also paid ones. You can search and find an image containing pretty much every software package available including images for databases, webservers, messaging systems etc. You can also push your own images to the store for others to use.
 
 For a simple example let’s create an image that contains python3 and jupyter. I’ll be using the ubuntu image as the base image here. Next we use the RUN command to execute the system update and installation of python3 and the pip package manager. The next layer installs jupyter. Then we add another layer which creates a new system user, another layer to change to this user with the USER command, and finally using the ENTRYPOINT command we will define the command to start jupyter (using the --ip=* param to allow incoming traffic to jupyter from any IP). By default the filename of a dockerfile is, well, Dockerfile.
-
+```
 # Use the latest ubuntu image as base for the new image
 # ubuntu is the image name and latest is a tag that
 # references a particular version of the image.
@@ -121,15 +121,15 @@ WORKDIR /home/jupyter
 
 # Start the jupyter notebook
 ENTRYPOINT ["jupyter", "notebook", "--ip=*"]
-
+```
 Now that we have the dockerfile ready let’s build the image. Running the command docker images lists the available images in the system. The ubuntu base image is not in our local system so when we will build our own image, it will be downloaded.
-
+```
 $ docker images
 REPOSITORY                   TAG                                       IMAGE ID            CREATED             SIZE
 hello-world                  latest                                    1815c82652c0        3 months ago        1.84kB
-
+```
 So let’s see how we build images. The basic command is docker build and the path to the dockerfile. Usually we also provide the -t param which defines the new image tag. You can find details regarding the docker build command here. Running the command produces the following output (it has been truncated):
-
+```
 $ docker build . -t jupyter
 Sending build context to Docker daemon   2.56kB
 Step 1/6 : FROM ubuntu:latest
@@ -159,20 +159,20 @@ Step 6/6 : ENTRYPOINT jupyter notebook --ip=*
 Removing intermediate container 0eceeb09bb7d
 Successfully built ff2f03f5aaea
 Successfully tagged jupyter:latest
-
+```
 Once it is finished we can run again the docker images command to see the newly created image:
-
+```
 $ docker images
 REPOSITORY                   TAG                                       IMAGE ID            CREATED              SIZE
 jupyter                      latest                                    ff2f03f5aaea        About a minute ago   541MB
 ubuntu                       latest                                    2d696327ab2e        2 weeks ago          122MB
 hello-world                  latest                                    1815c82652c0        3 months ago         1.84kB
-
+```
 Now we have our own brand new image to use. As mentioned before we can push this image to the store for others to use. Alternatively we can use a private docker registry (all the major cloud providers have similar services) if the image contains proprietary code, passwords, ssh keys etc. For all commercial applications, all companies use a private registry to privately store the images.
 Docker containers
 
 The main thing we do with an image is run a container. This is done with the docker run command. The full details for how to use the command can be found here. For the image we have beed building here we can run docker run -it -p 8888:8888 ff2f03f5aaea /bin/bash where ff2f03f5aaea is the image id that we got from the docker images command.
-
+```
 $ docker run -it -p 8888:8888 ff2f03f5aaea /bin/bash
 [I 20:47:25.881 NotebookApp] Writing notebook server cookie secret to /home/jupyter/.local/share/jupyter/runtime/notebook_cookie_secret
 [W 20:47:25.897 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
@@ -187,33 +187,33 @@ $ docker run -it -p 8888:8888 ff2f03f5aaea /bin/bash
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8888/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
+```
 If you open a browser window and go to the above url you’ll see the notebook live. It’s a new clean environment that we can shape as we like and destroy once we are done.
 
 Going to a new terminal and run the docker ps command (which lists the running containers) we can see our container! Notice the -p 8888:8888 parameter. This maps the container’s inner port to the host machine’s port. This is done so that we can access the jupyter notebook running inside the container from our machine. By default everything is isolated inside the container and we need to manually export any resources that need to be exposed as to be accessed.
-
+```
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 911acd30ed36        ff2f03f5aaea        "jupyter notebook ..."   18 minutes ago      Up 18 minutes       0.0.0.0:8888->8888/tcp   sleepy_hugle
-
+```
 Furthermore the way we ran the container above though we need to keep the terminal open otherwise the container will stop. Typing ctrl+c to kill the container we can see that there’s no longer any container:
-
+```
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-
+```
 To work around this issue we can add the -d parameter when we run a container which detaches it from the terminal so that it runs in the background even after the terminal has closed.
-
+```
 $ docker run -d -p 8888:8888 ff2f03f5aaea
 98890a46a5c2375b8aa3a36111ceee941992391b4c19f2878d9906e4ff5ce699
-
+```
 In this case we get the terminal back on the host system which means it has not been attached to the container. However to confirm that the container is running let’s run the docker ps command again:
-
+```
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 98890a46a5c2        ff2f03f5aaea        "jupyter notebook ..."   40 seconds ago      Up 38 seconds       0.0.0.0:8888->8888/tcp   hungry_euclid
-
+```
 It is indeed running. But how do we get the url from Jupyter? We use another docker command, docker logs <container>. Notice that instead of the container id we can also use the container name obtained above.
-
+```
 $ docker logs hungry_euclid
 [I 19:38:32.023 NotebookApp] Writing notebook server cookie secret to /home/jupyter/.local/share/jupyter/runtime/notebook_cookie_secret
 [W 19:38:32.059 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
@@ -228,28 +228,28 @@ $ docker logs hungry_euclid
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8888/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
+```
 Finally to stop the container we need to manually do it by running the command docker stop <container id>:
-
+```
 $ docker stop hungry_euclid
 hungry_euclid
-
+```
 And we can see that indeed there are no longer any containers running:
-
+```
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-
-Removing containers & images
+```
+### Removing containers & images
 
 One last thing that is useful to know is how to remove containers and images. The commands respectively are docker rm <container> and docker rmi <image>. The way to find containers that are stopped is docker ps -a.
-
+```
 $ docker ps -a
 98890a46a5c2        ff2f03f5aaea                                 "jupyter notebook ..."   10 minutes ago        Exited (0) 12 minutes ago                             hungry_euclid
 $ docker rm hungry_euclid
 hungry_euclid
-
+```
 Now to remove the image we have built:
-
+```
 $ docker images
 REPOSITORY                   TAG                                       IMAGE ID            CREATED             SIZE
 jupyter                      latest                                    ff2f03f5aaea        2 hours ago        541MB
@@ -266,19 +266,23 @@ Deleted: sha256:5fa718810d8afb400449e9967c1f0fc46bbe2f4273b67e4e61a18f159e859dcb
 Deleted: sha256:3d5ec8b404c085bc7548a32d8077e5ec58e25e1059e78c88be5effab9414932b
 Deleted: sha256:b55b2ae6bd8065f43e39f179773f82e0bb1df302162796bddd48cb606e6e6c1b
 
-Docker Storage (Update)
+
+```
+## Docker Storage (Update)
+
+#### Persistant storage on Docker
 
 User gvkalra on Reddit noted the importance of mounted storage so I think this needs to be included here as well. So the basic question reagarding this issue is that as mentioned everything about a container is ephemeral, that’s the whole point of creating a detached, clean environment in the first place. Then what happens if we have data that we need to persist after the container has been killed? Data could be either code or perhaps the output of calculations that we have performed. Docker solves this issue by the use of three persistent storage techniques. The techniques are volumes, bind mounts and tmpfs. Each of these have their specific use cases.
-Volumes
+#### 1. Volumes
 
 The first, most common and preferred one is volumes. These are isolated spaces in the docker host which are stored under /var/lib/docker/volumes. The volume is mounted when a container is ran and mapped to a location on the container filesystem. Whatever is written in that location by the container will persist after the container has been killed. It’s also useful to know that volumes can be shared across many different containers. Volumes can be created either explicitly and independent of any container with a standalone command, or they can be created if they passed as a docker run parameter. To create a new volume run the command docker volume create jupyter_store where jupyter_store should be whatever name the new volume should have. Running docker volume ls lists all the available volumes:
-
+```
 $ docker volume ls
 DRIVER              VOLUME NAME
 local               jupyter_store
-
+```
 To get additional information for our new volume we use docker volume inspect jupyter_store:
-
+```
 $ docker volume inspect jupyter_store
 [
     {
@@ -291,9 +295,9 @@ $ docker volume inspect jupyter_store
         "Scope": "local"
     }
 ]
-
+```
 So now we have a volume that we can use. Let’s start a new container and connect to jupyter:
-
+```
 $ docker run -d -p 8888:8888 -v jupyter_store:/home/jupyter d189bcaf0613
 2bafcd956a5f04039b81a4c1dbb3b9b6375b858d68ab9930c5a9c505d79ddca5
 $ docker ps
@@ -320,9 +324,9 @@ $ docker stop elastic_curran
 elastic_curran
 $ docker rm elastic_curran
 elastic_curran
-
+```
 Then I will create a new container and connect to jupyter:
-
+```
 $ docker run -d -p 8888:8888 -v jupyter_store:/home/jupyter d189bcaf0613
 99d953e9ea5960e88e7c756275a3f0746ebac55fce566e2f3bc7e0d6e4a671be
 $ docker ps
@@ -341,35 +345,36 @@ $ docker logs suspicious_saha
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8888/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
+```
 We can see that the previously created notebook is available. The fact that volumes are independent of the containers means that we can delete containers, create containers from new images altogether without having to worry about our data getting corrupted. Obviously this is also applicable with containers that contain databases.
 
 Finally let’s explore the folder that was assigned to this volume. Listing the folder files (we need sudo to access it because permissions to the docker volumes folder are restricted for the normal linux users):
-
+```
 $ sudo ls /var/lib/docker/volumes/jupyter_store/_data
 test.ipynb
-
+```
 Our jupyter notebook is saved there as expected. To get more details about the intricacies of volumes please refer to the full guide on the docker site here. Before we move on I should note the command to remove volumes is:
-
+```
 $ docker volume rm jupyter_store
-
-Bind Mount
+```
+#### 2. Bind Mount
 
 The second way to achieve data persistence on a container is using bind mounts. This is a pretty similar technique which instead of creating an isolated storage space for the containers, instead uses a folder from the docker host machine that is specified when we start a container. For example to use the current working directory we should run:
-
+```
 $ docker run -d -p 8888:8888 -v "$(PWD)":/home/jupyter d189bcaf0613
-
+```
 or if we wanted to mount the /tmp/source/input folder (the folder should exist on the docker host machine) we would use:
-
+```
 $ docker run -d -p 8888:8888 -v /tmp/source/input/:/home/jupyter d189bcaf0613
-
+```
 Obviously since these folders are not restricted to be used by docker alone, run the risk of being overwritten by other processes running on the docker host and hence this method of using persistence is not preferred except in cases where we have sensitive data on the docker host that we don’t want to include on the docker image, but we do need on the container, like configuration files or password data. To find out more about bind mounts please refer again to the docker site page.
-tmpfs
 
+#### 3. tmpfs
 The last way we can use persistence is with tmpfs. This is really a pseudo-persistence technique since we are using the docker host machine memory to create a mount point. This is useful in cases where we want to store data on the container just for lifecycle of the container but we also don’t want to keep these on the container memory. To use this mount we run a container with the --tmpfs param instead of -v and provide the container mount point:
 
+```
 $ docker run -d -p 8888:8888 -tmpfs /home/jupyter d189bcaf0613
-
+```
 This is really a niche use case, if you want find out more about it check the docs.
 Conclusion
 
