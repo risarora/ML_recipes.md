@@ -15,7 +15,7 @@ Contents
         tmpfs
     Conclusion
 
-What is Docker?
+## What is Docker?
 
 From Wikipedia:
 
