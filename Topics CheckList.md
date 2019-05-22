@@ -8,7 +8,7 @@ In order to use this, you can make a copy of this sheet and follow along with th
 
 |Status|Topic|URL|Date Completed|Notes|Personal Difficulty 1-5|
 |---|---|---|---|---|---|
-|x|[Machine Learning Algorithms]()|||
+|x|Machine Learning Algorithms
 |x|[Logistic Regression ](https://www.youtube.com/watch?v=zAULhNrnuL4&amp;t=26s )|||
 |x|[A/B Testing? ](https://www.youtube.com/watch?v=zFMgpxG-chM )|||
 |x|[Decision Tree ](http://www.acheronanalytics.com/acheron-blog/brilliant-explanation-of-a-decision-tree-algorithms )|||
@@ -28,7 +28,7 @@ In order to use this, you can make a copy of this sheet and follow along with th
 |x|[]( )|||
 |x|[]( )|||
 |x|[Probability And Statistics]( )|||
-|x|[A common question you might get at FAANG companies and other tech companies alike is the occasional probability or statistics question. The questions won’t necessarily require complex math. However]( if you haven’t thought about independent and dependent probabilities in while. It is good to review setting up the basic formulas.)|||
+|x|A common question you might get at FAANG companies and other tech companies alike is the occasional probability or statistics question. The questions won’t necessarily require complex math. However]( if you haven’t thought about independent and dependent probabilities in while. It is good to review setting up the basic formulas.
 |x|[]( )|||
 |x|[]( )|||
 |x|[Probability Videos]( )|||
@@ -48,7 +48,7 @@ In order to use this, you can make a copy of this sheet and follow along with th
 |x|[Probability Interview Questions]( )|||
 |x|[]( )|||
 |x|[A die is rolled twice. What is the probability of showing a 3 on the first roll and an odd number on the second roll?]( )|||
-|x|[In any 15-minute interval]( there is a 20% probability that you will see at least one shooting star. What is the proba­bility that you see at least one shooting star in the period of an hour?)|||
+|x|[In any 15-minute interval]( there is a 20% probability that you will see at least one shooting star. What is the probability that you see at least one shooting star in the period of an hour?)|||
 |x|[Alice has 2 kids and one of them is a girl. What is the probability that the other child is also a girl? You can assume that there are an equal number of males and females in the world.]( )|||
 |x|[You’re about to get on a plane to Seattle. You want to know]( )|||
 |x|[How many ways can you split 12 people into 3 teams of 4?]( )|||
@@ -89,9 +89,9 @@ In order to use this, you can make a copy of this sheet and follow along with th
 |x|[]( )|||
 |x|[Data Science Probability Statistics 17](http://interview-questions-247.appspot.com/data-science-probability-statistics-17 )|||
 |x|[]( )|||
-|x|[Product And Experiment Designs]( )|||
-"|x|[Product sense is an important skill for data scientists. Knowing what to measure on new products and why can help determine whether a product is doing well or not. The funny thing is
- sometimes metrics going the way you want them to might not always be good. Sometimes the reason people are spending more time on your website is because webpages might be taking longer to load or other similar problems. This is why metrics are tricky and what you measure is important.]()|||"
+|x|Product And Experiment Designs
+|x|Product sense is an important skill for data scientists. Knowing what to measure on new products and why can help determine whether a product is doing well or not. The funny thing is
+ sometimes metrics going the way you want them to might not always be good. Sometimes the reason people are spending more time on your website is because webpages might be taking longer to load or other similar problems. This is why metrics are tricky and what you measure is important.
 |x|[]( )|||
 |x|[Product And Experiment Design Concepts]( )|||
 |x|[]( )|||
