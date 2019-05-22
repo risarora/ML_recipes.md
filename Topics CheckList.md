@@ -89,32 +89,6 @@ In order to use this, you can make a copy of this sheet and follow along with th
 |x|[]( )|||
 |x|[Data Science Probability Statistics 17](http://interview-questions-247.appspot.com/data-science-probability-statistics-17 )|||
 |x|[]( )|||
-|x|Product And Experiment Designs
-|x|Product sense is an important skill for data scientists. Knowing what to measure on new products and why can help determine whether a product is doing well or not. The funny thing is
- sometimes metrics going the way you want them to might not always be good. Sometimes the reason people are spending more time on your website is because webpages might be taking longer to load or other similar problems. This is why metrics are tricky and what you measure is important.
-|x|[]( )|||
-|x|[Product And Experiment Design Concepts]( )|||
-|x|[]( )|||
-|x|[User Engagement Metrics](https://mixpanel.com/topics/important-user-engagement-metrics-apps/ )|||
-|x|[Data Scientist’s Toolbox: Experimental Design -Video](https://www.youtube.com/watch?v=vSXOJnGNtM4 )|||
-|x|[A/B Testing Guide](https://conversionxl.com/AB-Testing-Guide-ConversionXL.pdf )|||
-|x|[6 Themes Of Metrics](https://www.productschool.com/blog/product-management-2/interview/answering-metrics-interview-question-product-management/ )|||
-|x|[]( )|||
-|x|[Product And Metrics Questions]( )|||
-|x|[]( )|||
-|x|[An important metric goes down]()|||
-"|x|[What metrics would you use to quantify the success of youtube ads (this could also be extended to other products like Snapchat filters
- how would you dig into the causes?]( twitter live-streaming)|||"
-"|x|[How do you measure the success or failure of a product/product feature 
-twitter live-streaming	 fortnite new features	 etc)]( )|||"
-|x|[Google has released a new version of their search algorithm]( for which they used A/B testing. During the testing process)|||
-|x|[People in the treatment group performed more queries than the control group.]( )|||
-|x|[Advertising revenue was higher in the treatment group as well.]( )|||
-|x|[]( )|||
-|x|[What may be the cause of people in the treatment group performing more searches than the control group? There are different possible answers here.]( )|||
-|x|[]( )|||
-|x|[Question 4 borrowed from Zarantech](https://www.zarantech.com/blog/interview-questions/data-science-product-analysis-and-business-metrics-interview-questions/ )|||
-|x|[]( )|||
 |x|[Programming]( )|||
 |x|[Just because data science doesn't always require heavy programming]( it doesn't mean that interviewers won't ask you traverse a binary tree. So make sure you ask your interviewer what to expect. Don't be daunted by these questions. Pick a few to do just so you're not surprised in an interview.)|||
 |x|[]( )|||
@@ -197,6 +171,42 @@ twitter live-streaming	 fortnite new features	 etc)]( )|||"
 |x|[SQL Interview Questions: 3 Tech Screening Exercises (For Data Analysts)](https://data36.com/sql-interview-questions-tech-screening-data-analysts/ )|||
 |x|[Good Luck With Your Studies!]( )|||
 |x|[]( )|||
+
+
+
+
+|x|Product And Experiment Designs
+|x|Product sense is an important skill for data scientists. Knowing what to measure on new products and why can help determine whether a product is doing well or not. The funny thing is
+ sometimes metrics going the way you want them to might not always be good. Sometimes the reason people are spending more time on your website is because webpages might be taking longer to load or other similar problems. This is why metrics are tricky and what you measure is important.
+
+
+|Status|Topic|URL|Date Completed|Notes|Personal Difficulty 1-5|
+|---|---|---|---|---|---|
+|x|[]( )|||
+|x|[Product And Experiment Design Concepts]( )|||
+|x||||
+|x|[User Engagement Metrics](https://mixpanel.com/topics/important-user-engagement-metrics-apps/ )|||
+|x|[Data Scientist’s Toolbox: Experimental Design -Video](https://www.youtube.com/watch?v=vSXOJnGNtM4 )|||
+|x|[A/B Testing Guide](https://conversionxl.com/AB-Testing-Guide-ConversionXL.pdf )|||
+|x|[6 Themes Of Metrics](https://www.productschool.com/blog/product-management-2/interview/answering-metrics-interview-question-product-management/ )|||
+|x||||
+|x|[Product And Metrics Questions]( )|||
+|x||||
+|x|[An important metric goes down]()|||
+|x|What metrics would you use to quantify the success of youtube ads (this could also be extended to other products like Snapchat filters how would you dig into the causes? twitter live-streaming) 
+|x|[How do you measure the success or failure of a product/product feature 
+twitter live-streaming	 fortnite new features	 etc)]( )|||
+|x|[Google has released a new version of their search algorithm]( for which they used A/B testing. During the testing process)|||
+|x|[People in the treatment group performed more queries than the control group.]( )|||
+|x|[Advertising revenue was higher in the treatment group as well.]( )|||
+|x|[]( )|||
+|x|[What may be the cause of people in the treatment group performing more searches than the control group? There are different possible answers here.]( )|||
+|x|[]( )|||
+|x|[Question 4 borrowed from Zarantech](https://www.zarantech.com/blog/interview-questions/data-science-product-analysis-and-business-metrics-interview-questions/ )|||
+|x|[]( )|||
+
+|Status|Topic|URL|Date Completed|Notes|Personal Difficulty 1-5|
+|---|---|---|---|---|---|
 |x|[Some Other Great Resources!]( )|||
 |x|[142 Resources for Mastering Coding Interviews](https://medium.com/better-programming/the-software-engineering-study-guide-bac25b8b61eb )|||
 |x|[Learning Data Science: Our Top 25 Data Science Courses](https://www.coriers.com/25-of-the-best-data-science-courses-online/ )|||
