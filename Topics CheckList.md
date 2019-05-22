@@ -6,11 +6,11 @@ This is a data science study guide that you can use to help prepare yourself for
 In order to use this, you can make a copy of this sheet and follow along with the study guide. Keeping track helps you know where you are and how you are doing.
 
 
-- [ ] |Topic|URL|Date Completed|Notes|Personal Difficulty 1-5|
+Status|Topic|URL|Date Completed|Notes|Personal Difficulty 1-5|
 ---|---|---|---
-<ul><li>- [x]</li></ul> |Machine Learning Algorithms|||
+ |Machine Learning Algorithms|||
 - [ ] |Logistic Regression — Video|https://www.youtube.com/watch?v=zAULhNrnuL4&amp;t=26s   
-- [ ] |A/B Testing? — Video|https://www.youtube.com/watch?v=zFMgpxG-chM   
+<ul><li>- [x]</li></ul> |A/B Testing? — Video|https://www.youtube.com/watch?v=zFMgpxG-chM   
 - [ ] |Decision Tree — Post|http://www.acheronanalytics.com/acheron-blog/brilliant-explanation-of-a-decision-tree-algorithms   
 - [ ] |SVM — Post|https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47   
 - [ ] |How SVM — Video|https://www.youtube.com/watch?v=1NxnPkZM9bc   
