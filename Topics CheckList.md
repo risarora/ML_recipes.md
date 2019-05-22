@@ -26,7 +26,6 @@ x|SVM — Post|https://towardsdatascience.com/support-vector-machine-introdu
 x|How SVM — Video|https://www.youtube.com/watch?v=1NxnPkZM9bc |||
 x|Principal Component Analysis: PCA — post|http://setosa.io/ev/principal-component-analysis/ |||
 x|Principal Component Analysis — Video|https://www.youtube.com/watch?v=FgakZw6K1QQ |||
-
 x|Adaboost — Post|https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/ |||
 x|AdaBoost — Video|https://www.youtube.com/watch?v=LsK-xG1cLYA |||
 x|A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning — Post|https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/ |||
