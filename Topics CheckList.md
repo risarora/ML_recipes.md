@@ -16,6 +16,9 @@ Status|Topic|URL|Date Completed|Notes|Personal Difficulty 1-5|
 |How SVM — Video|https://www.youtube.com/watch?v=1NxnPkZM9bc |||
 |Principal Component Analysis: PCA — post|http://setosa.io/ev/principal-component-analysis/ |||
 |Principal Component Analysis — Video|https://www.youtube.com/watch?v=FgakZw6K1QQ |||
+
+
+
 |Adaboost — Post|https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/ |||
 |AdaBoost — Video|https://www.youtube.com/watch?v=LsK-xG1cLYA |||
 |A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning — Post|https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/ |||
