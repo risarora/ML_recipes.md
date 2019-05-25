@@ -2,7 +2,7 @@
 
 Below are the steps to setup hadoop single node cluster on Virtual Box
 
-1. Start VirtualBox
+1. Start <mark>VirtualBox</mark>
 * Ensure that the latest version of Ubuntu LTS is installed on your VM software.  You can use link such as this.
  Once installed, login to your Ubuntu installation with your credentials. Open a terminal command.
 * . Change the hostname to _hadoosn_ in the hostname and _/etc/hostname_ file. Given the IP to this VM as 192.168.56.9. Make the change accordingly in _/etc/hosts_ file.
@@ -18,8 +18,8 @@ Below are the steps to setup hadoop single node cluster on Virtual Box
   auto eth1
              iface eth1 inet dhcp
 ```
-* Now to ensure that your ssh is working, check ssh immediately after the below commands by executing whereis ssh and whereis sshd commands. If any one of these commands return a blank response that means your SSH is not properly installed. Install it now the following 3 steps and check the ssh and sshd again:
 
+* Now to ensure that your ssh is working, check ssh immediately after the below commands by executing whereis ssh and whereis sshd commands. If any one of these commands return a blank response that means your SSH is not properly installed. Install it now the following 3 steps and check the ssh and sshd again:
 ```shell
   sudo apt-get remove openssh-client
   sudo apt-get update
@@ -27,11 +27,11 @@ Below are the steps to setup hadoop single node cluster on Virtual Box
 ```
 Reboot once for all the above changes to take into effect.
 
-* Now enable root access executing the following steps
+## Root Access
+1.  Now enable root access executing the following steps
 ```    
 sudo nano /etc/ssh/sshd_config
 ```
-
 comment line PermitRootLogin without-password
 Just below the commented line, add PermitRootLogin yes
 
@@ -53,8 +53,12 @@ cat /home/hadoopuser/.ssh/id_rsa.pub | ssh root@localhost 'cat >> /root/.ssh/aut
 ```
 This command will ensure that the .ssh folder is created in root location and also the public key created by the syed user is copied to the authorised_keys file in the root location.
 
-Now you need to give the required right to .ssh folder and authorised_keys file in ssh location. Execute chmod 700 /root/.ssh, chmod 600 /root/.ssh/authorized_keys, chmod 640 /root/.ssh/authorized_keys
-Now try to ssh in your root log in using ssh root@hadoopsn. You should be able to ssh in without password. Doing the same with syed user in root login will ask you for a password, which is fine. Doing the same with syed user in syed log will also ask for a password. This should also be fine.
+Now you need to give the required right to .ssh folder and authorised_keys file in ssh location. Execute
+```
+chmod 700 /root/.ssh, chmod 600 /root/.ssh/authorized_keys, chmod 640 /root/.ssh/authorized_keys
+```
+Now try to ssh in your root log in using
+<mark>ssh root@hadoopsn</mark>. You should be able to ssh in without password. Doing the same with syed user in root login will ask you for a password, which is fine. Doing the same with syed user in syed log will also ask for a password. This should also be fine.
 If you get “Agent admitted failure to sign using the key” issue, just run ssh-add from syed log in and you should be fine.
 
 ### Install Java
