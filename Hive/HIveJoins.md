@@ -66,13 +66,10 @@ LOAD DATA LOCAL INPATH '/home/training/MyDemos/Hive/Item_Details.txt'
 OVERWRITE INTO TABLE ITEM_Details;
 ```
 
+### View the data
+```
 select name,sales,item_code from sales_details ;
 select Name,item_code,Price from item_details ;
-
-#### FILTER
-```
-select sales_details.* from sales_details where item_code >103;
-
 ```
 
 #### JOIN
@@ -107,6 +104,11 @@ ToothBrush              103     50
 
 #### Sub queries:
 A Query present within a Query is known as a sub query. The main query will depend on the values returned by the subqueries.
+
+Hive does have a support of SUB-QUERIES from version-0.13. So you can use this version. Or you can try this query:
+```
+select * from table1 t1 JOIN (select 100_string_column as col2 from table2 where (whatever your condition is)) t2 ON t1.<matching_column> = t2.col2
+```
 
 * Subqueries can be classified into two types
     * Subqueries in FROM clause

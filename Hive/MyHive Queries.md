@@ -47,6 +47,12 @@ Time taken: 0.159 seconds
 hive>
 ```
 
+#### FILTER
+```
+select sales_details.* from Item_Details where Price > 103;
+
+```
+
 
 #### ALTER Table
 ```
@@ -59,7 +65,7 @@ alter table SALES_ITEM rename to item_details;
 ```
 ##################################################################
 
-### View Table Details
+### View Table Meta Data
 
 DESCRIBE <TABLE_NAME>
 DESCRIBE EXTENDED <TABLE_NAME>
@@ -70,10 +76,10 @@ ILLUSTRATE <HQL Query>
 
 ##################################################################
 
-OUTPUT TO DATA FILE/ TABLE
+### OUTPUT TO DATA FILE/ TABLE
 Insert overwrite table Items_used
 select * from item_details LEFT SEMI JOIN sales_details ON (sales_details.item_code= item_details.item_code);
-
+```
 --Create table if not exists Items_used (
 Create table  Items_used (
 Name STRING,
@@ -112,16 +118,8 @@ select item_code from item_details LEFT SEMI JOIN sales_details ON (sales_detail
 101
 102
 103
-
+```
 ########################################################
-
-Hive does have a support of SUB-QUERIES from version-0.13. So you can use this version. Or you can try this query:
-
-select * from table1 t1 JOIN (select 100_string_column as col2 from table2 where (whatever your condition is)) t2 ON t1.<matching_column> = t2.col2
-########################################################
-
-Sub Query
-TBD
 
 ### UDF - User Defined Functions in Hive
 
