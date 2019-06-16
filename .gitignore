@@ -12,3 +12,8 @@ Modeling/.ipynb_checkpoints/*
 .DS_Store
 .DS_Store
 .DS_Store
+./P*/.ipynb_checkpoints/*
+Others/*
+Pandas Operations/.ipynb_checkpoints/*
+lastfm-matrix-germany.csv.webarchive
+*.pdf
