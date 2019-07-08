@@ -1,8 +1,8 @@
-Backbone of the blockchain : public key private key cryptographyBackbone of the blockchain : public key private key cryptography
+# Public key private key cryptography
 
 Public-key encryption is a cryptographic system that uses two keys -- a public key known to everyone and a private or secret key known only to the recipient of the message.
 
-Example
+### Example
 An example of generating RSA Key pair is given below. (For ease of understanding, the primes p & q taken here are small values. Practically, these values are very high).
 
 Let two primes be p = 7 and q = 13. Thus, modulus n = pq = 7 x 13 = 91.
@@ -18,12 +18,12 @@ Check that the d calculated is correct by computing −
 de = 29 × 5 = 145 = 1 mod 72
 Hence, public key is (91, 5) and private keys is (91, 29).
 
-Encryption and Decryption
+### Encryption and Decryption
 Once the key pair has been generated, the process of encryption and decryption are relatively straightforward and computationally easy.
 
 Interestingly, RSA does not directly operate on strings of bits as in case of symmetric key encryption. It operates on numbers modulo n. Hence, it is necessary to represent the plaintext as a series of numbers less than n.
 
-RSA Encryption
+### RSA Encryption
 Suppose the sender wish to send some text message to someone whose public key is (n, e).
 
 The sender then represents the plaintext as a series of numbers less than n.
