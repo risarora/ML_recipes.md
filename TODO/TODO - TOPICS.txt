@@ -1,0 +1,93 @@
+SQL
+Query optimization (both for SQL and noSQL systems).
+
+
+NAN Handling
+Class Imbalance
+https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c
+
+Dimensionality Reduction
+* PCA
+
+Feature Selection
+
+  Filter Methods
+  Wrapper Methods
+  Embedded Methods
+    Lasso:
+    Ridge:
+
+Ensemble
+https://towardsdatascience.com/study-of-decision-trees-and-ensembles-on-scikit-learn-e713a8e532b8
+Models
+  Baseline model using logistic regression and linear regression
+
+Decision Trees
+Difference btween supervised and un supervised learning
+
+Information Gain
+  - Gini
+  - Entropy
+
+Clustering
+  - Elbow method
+
+Model Evaluation
+Classification Score
+  Learning Curve
+  Bias Variance Trade off
+  https://cdn-images-1.medium.com/max/800/1*Uzjz7fIFjPMQp0nCXp8QiQ.png
+
+
+ROC
+  The ROC curve can also help debug a model. For example, if the bottom left corner of the curve is closer to the random line, it implies that the model is misclassifying at Y=0. Whereas, if it is random on the top right, it implies the errors are occurring at Y=1. Also, if there are spikes on the curve (as opposed to being smooth), it implies the model is not stable. When dealing with fraud models, ROC is your best friend.
+  https://www.kdnuggets.com/2018/07/receiver-operating-characteristic-curves-demystified-python.html
+
+
+
+#### Difference between clustering and classification
+
+  *Classification*- A data-set can have different groups/ classes. red, green and black. Classification will try to find rules that divides them in different classes.
+  *Custering*- if a data-set is not having any class and you want to put them in some class/grouping, you do clustering. The purple circles above.
+
+  One liner for Classification:
+
+  Classifying data into pre-defined categories
+
+  One liner for Clustering:
+
+  Grouping data into a set of categories
+
+  Key difference:
+
+  Classification is taking data and putting it into pre-defined categories and in Clustering the set of categories, that you want to group the data into, is not known beforehand.
+
+  Conclusion:
+
+  Classification assigns the category to 1 new item, based on already labeled items while Clustering takes a bunch of unlabeled items and divide them into the categories
+  In Classification, the categories\groups to be divided are known beforehand while in Clustering, the categories\groups to be divided are unknown beforehand
+  In Classification, there are 2 phases – Training phase and then the test phase while in Clustering, there is only 1 phase – dividing of training data in clusters
+  Classification is Supervised Learning while Clustering is Unsupervised Learning
+
+https://neelbhatt40.wordpress.com/2017/11/21/classification-and-clustering-machine-learning-interview-questions-answers-part-i/
+http://www.differencebetween.net/technology/difference-between-clustering-and-classification/
+
+
+
+
+https://www.kdnuggets.com/2018/07/beginners-ask-how-many-hidden-layers-neurons-neural-networks.html
+https://www.kdnuggets.com/2018/07/devops-data-scientists-taming-unicorn.html
+https://www.kdnuggets.com/2017/06/feature-engineering-help-kaggle-competition-1.html
+https://medium.com/unstructured/how-feature-engineering-can-help-you-do-well-in-a-kaggle-competition-part-ii-3645d92282b8
+https://www.kdnuggets.com/2018/04/operational-machine-learning-successful-mlops.html
+
+
+
+Data Science Portfolio
+https://whatsthebigdata.com/2015/10/17/how-to-become-a-unicorn-data-scientist-and-make-more-than-240000/
+https://towardsdatascience.com/how-to-build-a-data-science-portfolio-5f566517c79c
+https://reshamas.github.io/first-data-science-job/
+https://towardsdatascience.com/how-to-get-a-job-as-a-data-scientist-f417078fe13e
+https://whatsthebigdata.com/2015/10/17/how-to-become-a-unicorn-data-scientist-and-make-more-than-240000/
+https://reshamas.github.io/
+https://www.kdnuggets.com/2018/07/build-data-science-portfolio.html

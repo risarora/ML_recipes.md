@@ -84,12 +84,12 @@ stats for PERMALINK_CONTENT_2010_06_04.frm: file size=10156 , total pages=2 , ca
 ---
 total cached size: 32847278080
 ```
-With the above output you can see that there are several *.MYD, *.MYI, and *.frm files that are currently being cached.
+With the above output you can see that there are several \*.MYD, \*.MYI, and \*.frm files that are currently being cached.
 
 #### Swap
 If you want to clear out your swap you can use the following commands.
 
-````
+```
 $ free
              total       used       free     shared    buffers     cached
 Mem:       7987492    7298164     689328          0      30416     457936
@@ -112,7 +112,7 @@ And to re-enable it:
 
 ```
 $ swapon -a
-```
+
 And now reconfirm with free:
 
 ```shell
