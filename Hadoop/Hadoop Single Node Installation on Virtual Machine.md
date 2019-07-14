@@ -51,7 +51,8 @@ Now run the same on localhost
 ```
 cat /home/hadoopuser/.ssh/id_rsa.pub | ssh root@localhost 'cat >> /root/.ssh/authorized_keys'
 ```
-This command will ensure that the .ssh folder is created in root location and also the public key created by the syed user is copied to the authorised_keys file in the root location.
+This command will ensure that the .ssh folder is created in root location and also the public key
+created by the hadoopuser user is copied to the authorised_keys file in the root location. user is copied to the authorised_keys file in the root location.
 
 Now you need to give the required right to .ssh folder and authorised_keys file in ssh location. Execute
 ```
